@@ -1,0 +1,106 @@
+@import '../scss/_cssreset.scss';
+
+
+$color1: #ece8e8;
+$color2: #89CFF0;
+$color3: #00308F;
+$color4: #FF5F00;
+$color5: #F8D568;
+$color6: #C0362C;
+$color7: #FFBF00;
+$colorHyd: yellow;
+
+@font-face {
+    font-family: mainfont;
+    src: url("../../public/Figtree-Medium.ttf");
+}
+
+@font-face {
+    font-family: navfont;
+    src: url("../../public/Ubuntu-B.ttf");
+}
+
+body {
+    font-family: mainfont;
+    font-size: 18px;
+}
+
+.navContainer {
+    margin: auto;
+    width: 1200px;
+
+    height: 80px;
+    background-color: $color3;
+
+    .navigation {
+
+
+        position: fixed;
+        background-color: $color1;
+        width: 1140px;
+        padding: 30px;
+        height: 20px;
+        font-family: navfont;
+        vertical-align: middle;
+
+        .button {
+            background-image: linear-gradient($color4, $color7);
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 5px 20px;
+            margin: 10px 20px;
+            text-decoration: none;
+            color: $color6;
+
+            &:hover {
+                background-image: linear-gradient($color4, $color5);
+
+            }
+        }
+    }
+}
+
+.food {
+    margin: auto;
+    width: 1200px;
+
+    font-size: 22px;
+    display: flex;
+
+    .container {
+
+        width: 630px;
+        background-color: #FF5F00;
+
+        .title {
+            background-image: linear-gradient($color2, $color3);
+            width: 600px;
+
+      
+
+            th {
+                padding: 20px 0px;
+                text-align: left;
+            }
+        }
+
+        .hydrates {
+            padding: 5px 20px;
+            background-color: $colorHyd;
+        }
+
+        input {
+            background-color: #C0362C;
+            width: 50px;
+        }
+        .protein {
+            padding: 5px 15px;
+            width: 70px;
+        }
+
+        .name {
+            padding: 5px 20px;
+        }
+    }
+
+}
