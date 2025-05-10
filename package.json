@@ -29,6 +29,7 @@
     "webpack-dev-server": "^4.12.0"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
     "@mui/x-data-grid": "^6.6.0",
@@ -38,6 +39,8 @@
     "prop-type": "^0.0.1",
     "prop-types": "^15.8.1",
     "react-router-dom": "^6.10.0",
+    "react-slick": "^0.30.3",
+    "react-slideshow-image": "^4.3.2",
     "react-spinners": "^0.13.8",
     "save": "^2.9.0"
   }

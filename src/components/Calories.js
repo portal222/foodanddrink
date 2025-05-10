@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BackToTop from "./BackToTop";
+import Groceries from "./Groceries";
 
 const Calories = () => {
 
@@ -209,12 +209,62 @@ const Calories = () => {
         setInputValue50(e.target.value)
     }
 
+    const rice = "Rice"
+    const oatmeal = "Oatmeal"
+    const potato = "Potato"
+    const corn = "Corn"
+    const spaghetti = "Spaghetti"
+    const lens = "Lens"
+    const peas = "Peas"
+    const bean = "Bean"
+    const tuna = "Tuna"
+    const Chicken = "Chicken"
+    const Turkey = "Turkey"
+    const beef = "Lean beef"
+    const Beef = "Beef"
+    const pork = "Pork"
+    const egg = "Egg"
+    const Butter = "Butter"
+    const Milk = "Milk"
+    const cheese = "Young cheese"
+    const Yogurt = "Yogurt"
+    const Parmesan = "Parmesan"
+    const Oliveoil = "Olive oil"
+    const olives = "Green Olives"
+    const Coconutoil = "Coconut oil"
+    const Coconut = "Coconut"
+    const Almond = "Almonds"
+    const Hazelnut = "Hazelnuts"
+    const Walnut = "Walnuts"
+    const Sunflower = "Sunflower seeds"
+    const Flax = "Flax seed"
+    const Banana = "Banana"
+    const Apple = "Apples"
+    const Orange = "Orange"
+    const Melon = "Melon"
+    const Grapefruit = "Grapefruit"
+    const Pineapple = "Pineapple"
+    const Raisins = "Raisins"
+    const Cabbage = "Cabbage"
+    const Carrot = "Carrot"
+    const Beetroot = "Beetroot"
+    const Broccoli = "Broccoli"
+    const Kale = "Kale"
+    const Spinach = "Spinach"
+    const Zucchini = "Zucchini"
+    const Leek = "Leek"
+    const Eggplant = "Eggplant"
+    const Tomato = "Tomato"
+    const Tomatojuice = "Tomato juice"
+    const Redwine = "Red wine"
+    const beer = "Light beer"
+    const Brandy = "Brandy"
 
 
     return (
 
         <>
-            <div className="food">
+            <div className="groceries">
                 <div className="container">
                     <table >
                         <thead >
@@ -229,9 +279,15 @@ const Calories = () => {
                         </thead>
                         <tbody  >
                             <tr className="hydrates">
-                                <td className="name">Rice</td>
+                                {/* <td className="name"
+                                      onClick={() => {
+                                        handleClick(rice);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >{rice}</td> */}
+                                <Groceries food={rice} />
                                 <td className="protein">
-                                    <input
+                                    <input className="inputPro"
                                         name="value1" type="number"
                                         value={inputValue1}
                                         onChange={handleChangeValue1} />
@@ -250,9 +306,16 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="hydrates">
-                                <td className="name">Oatmeal</td>
+                                {/* <td className="name"
+                                      onClick={() => {
+                                        handleClick(oatmeal);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >{oatmeal}</td> */}
+                                <Groceries food={oatmeal} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value2"
                                         value={inputValue2}
                                         onChange={handleChangeValue2} />
@@ -271,9 +334,16 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="hydrates">
-                                <td className="name">Potato</td>
+                                {/* <td className="name"
+                                      onClick={() => {
+                                        handleClick(potato);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >{potato}</td> */}
+                                <Groceries food={potato} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value3"
                                         value={inputValue3}
                                         onChange={handleChangeValue3} />
@@ -292,9 +362,12 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="hydrates">
-                                <td className="name">Corn grits</td>
+
+                                <Groceries food={corn} />
+
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value4"
                                         value={inputValue4}
                                         onChange={handleChangeValue4} />
@@ -313,9 +386,12 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="hydrates">
-                                <td className="name">Spaghetti durum</td>
+
+
+                                <Groceries food={spaghetti} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value5"
                                         value={inputValue5}
                                         onChange={handleChangeValue5} />
@@ -334,9 +410,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Lens</td>
+                                <Groceries food={lens} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value6"
                                         value={inputValue6}
                                         onChange={handleChangeValue6} />
@@ -355,9 +432,11 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Yellow peas</td>
+
+                                <Groceries food={peas} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value7"
                                         value={inputValue7}
                                         onChange={handleChangeValue7} />
@@ -376,9 +455,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Beans</td>
+                                <Groceries food={bean} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value8"
                                         value={inputValue8}
                                         onChange={handleChangeValue8} />
@@ -397,9 +477,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Canned tuna</td>
+                                <Groceries food={tuna} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value9"
                                         value={inputValue9}
                                         onChange={handleChangeValue9} />
@@ -418,9 +499,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Chicken</td>
+                                <Groceries food={Chicken} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value10"
                                         value={inputValue10}
                                         onChange={handleChangeValue10} />
@@ -439,9 +521,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Turkey breast</td>
+                                <Groceries food={Turkey} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value11"
                                         value={inputValue11}
                                         onChange={handleChangeValue11} />
@@ -460,9 +543,12 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Lean beef</td>
+                                <Groceries food={beef} />
+
+
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value12"
                                         value={inputValue12}
                                         onChange={handleChangeValue12} />
@@ -481,9 +567,16 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Beef (leg)</td>
+                                {/* <td className="name"
+                                    onClick={() => {
+                                        handleClick(Beef);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >{Beef} (leg)</td> */}
+                                <Groceries food={Beef} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value13"
                                         value={inputValue13}
                                         onChange={handleChangeValue13} />
@@ -502,9 +595,16 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Lean pork</td>
+                                {/* <td className="name"
+                                    onClick={() => {
+                                        handleClick(pork);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >Lean {pork}</td> */}
+                                <Groceries food={pork} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value14"
                                         value={inputValue14}
                                         onChange={handleChangeValue14} />
@@ -523,9 +623,16 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="prot">
-                                <td className="name">Whole egg</td>
+                                {/* <td className="name"
+                                    onClick={() => {
+                                        handleClick(egg);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >Whole {egg}</td> */}
+                                <Groceries food={egg} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value15"
                                         value={inputValue15}
                                         onChange={handleChangeValue15} />
@@ -543,10 +650,11 @@ const Calories = () => {
                                     {(inputValue15 * 55 * 1.62).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="mleko">
-                                <td className="name">Butter</td>
+                            <tr className="milk">
+                                <Groceries food={Butter} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value16"
                                         value={inputValue16}
                                         onChange={handleChangeValue16} />
@@ -564,10 +672,17 @@ const Calories = () => {
                                     {(inputValue16 * 7.5).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="mleko">
-                                <td className="name">Milk 2.8%</td>
+                            <tr className="milk">
+                                {/* <td className="name"
+                                    onClick={() => {
+                                        handleClick(Milk);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                >{Milk} 2.8%</td> */}
+                                <Groceries food={Milk} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value17"
                                         value={inputValue17}
                                         onChange={handleChangeValue17} />
@@ -586,10 +701,11 @@ const Calories = () => {
                                     {(inputValue17 * 0.56).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="mleko">
-                                <td className="name">Young cheese</td>
+                            <tr className="milk">
+                                <Groceries food={cheese} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value18"
                                         value={inputValue18}
                                         onChange={handleChangeValue18} />
@@ -608,10 +724,12 @@ const Calories = () => {
                                     {(inputValue18 * 1.15).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="mleko">
-                                <td className="name">Yogurt 2.8%</td>
+                            <tr className="milk">
+
+                                <Groceries food={Yogurt} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value19"
                                         value={inputValue19}
                                         onChange={handleChangeValue19} />
@@ -630,10 +748,12 @@ const Calories = () => {
                                     {(inputValue19 * 0.52).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="mleko">
-                                <td className="name">Parmesan</td>
+                            <tr className="milk">
+
+                                <Groceries food={Parmesan} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value20"
                                         value={inputValue20}
                                         onChange={handleChangeValue20} />
@@ -653,9 +773,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="oil">
-                                <td className="name">Olive oil</td>
+                                <Groceries food={Oliveoil} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value21"
                                         value={inputValue21}
                                         onChange={handleChangeValue21} />
@@ -675,9 +796,11 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="oil">
-                                <td className="name">Green olives</td>
+
+                                <Groceries food={olives} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value22"
                                         value={inputValue22}
                                         onChange={handleChangeValue22} />
@@ -697,9 +820,11 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="oil">
-                                <td className="name">Coconut oil</td>
+
+                                <Groceries food={Coconutoil} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value23"
                                         value={inputValue23}
                                         onChange={handleChangeValue23} />
@@ -725,7 +850,7 @@ const Calories = () => {
                     <table>
                         <thead >
                             <tr className="title">
-                            <th >Groceries</th>
+                                <th >Groceries</th>
                                 <th >g/ml</th>
                                 <th>Protein</th>
                                 <th>CH</th>
@@ -734,10 +859,12 @@ const Calories = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="orah">
-                                <td className="name">Coconut</td>
+                            <tr className="almond">
+
+                                <Groceries food={Coconut} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value24"
                                         value={inputValue24}
                                         onChange={handleChangeValue24} />
@@ -756,10 +883,12 @@ const Calories = () => {
                                     {(inputValue24 * 3.54).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="orah">
-                                <td className="name">Almond</td>
+                            <tr className="almond">
+
+                                <Groceries food={Almond} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value25"
                                         value={inputValue25}
                                         onChange={handleChangeValue25} />
@@ -778,10 +907,11 @@ const Calories = () => {
                                     {(inputValue25 * 6.34).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="orah">
-                                <td className="name">Walnut</td>
+                            <tr className="almond">
+                                <Groceries food={Walnut} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value26"
                                         value={inputValue26}
                                         onChange={handleChangeValue26} />
@@ -800,10 +930,12 @@ const Calories = () => {
                                     {(inputValue26 * 6.77).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="orah">
-                                <td className="name">Hazelnut</td>
+                            <tr className="almond">
+
+                                <Groceries food={Hazelnut} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value27"
                                         value={inputValue27}
                                         onChange={handleChangeValue27} />
@@ -822,10 +954,11 @@ const Calories = () => {
                                     {(inputValue27 * 6.57).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="orah">
-                                <td className="name">Sunflower seeds</td>
+                            <tr className="almond">
+                                <Groceries food={Sunflower} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value28"
                                         value={inputValue28}
                                         onChange={handleChangeValue28} />
@@ -835,7 +968,6 @@ const Calories = () => {
                                 </td>
                                 <td className="protein">
                                     {(inputValue28 * 0.2).toFixed(1)}
-
                                 </td>
                                 <td className="protein">
                                     {(inputValue28 * 0.515).toFixed(1)}
@@ -844,10 +976,11 @@ const Calories = () => {
                                     {(inputValue28 * 5.84).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="orah">
-                                <td className="name">Flax seed</td>
+                            <tr className="almond">
+                                <Groceries food={Flax} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value29"
                                         value={inputValue29}
                                         onChange={handleChangeValue29} />
@@ -857,7 +990,6 @@ const Calories = () => {
                                 </td>
                                 <td className="protein">
                                     {(inputValue29 * 0.28).toFixed(1)}
-
                                 </td>
                                 <td className="protein">
                                     {(inputValue29 * 0.42).toFixed(1)}
@@ -866,10 +998,11 @@ const Calories = () => {
                                     {(inputValue29 * 5.34).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Banana</td>
+                            <tr className="fruit">
+                                <Groceries food={Banana} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value30"
                                         value={inputValue30}
                                         onChange={handleChangeValue30} />
@@ -879,7 +1012,6 @@ const Calories = () => {
                                 </td>
                                 <td className="protein">
                                     {(inputValue30 * 0.23).toFixed(1)}
-
                                 </td>
                                 <td className="protein">
 
@@ -888,32 +1020,32 @@ const Calories = () => {
                                     {(inputValue30 * 0.89).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Apple</td>
+                            <tr className="fruit">
+                                <Groceries food={Apple} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value31"
                                         value={inputValue31}
                                         onChange={handleChangeValue31} />
                                 </td>
                                 <td className="protein">
-
                                 </td>
                                 <td className="protein">
                                     {(inputValue31 * 0.13).toFixed(1)}
 
                                 </td>
                                 <td className="protein">
-
                                 </td>
                                 <td className="protein">
                                     {(inputValue31 * 0.5).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Orange</td>
+                            <tr className="fruit">
+                                <Groceries food={Orange} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value32"
                                         value={inputValue32}
                                         onChange={handleChangeValue32} />
@@ -932,10 +1064,11 @@ const Calories = () => {
                                     {(inputValue32 * 0.47).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Melon</td>
+                            <tr className="fruit">
+                                <Groceries food={Melon} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value33"
                                         value={inputValue33}
                                         onChange={handleChangeValue33} />
@@ -954,10 +1087,11 @@ const Calories = () => {
                                     {(inputValue33 * 0.34).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Grapefruit</td>
+                            <tr className="fruit">
+                                <Groceries food={Grapefruit} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value34"
                                         value={inputValue34}
                                         onChange={handleChangeValue34} />
@@ -976,10 +1110,11 @@ const Calories = () => {
                                     {(inputValue34 * 0.28).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Pineapple</td>
+                            <tr className="fruit">
+                                <Groceries food={Pineapple} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value35"
                                         value={inputValue35}
                                         onChange={handleChangeValue35} />
@@ -998,10 +1133,11 @@ const Calories = () => {
                                     {(inputValue35 * 0.48).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="voce">
-                                <td className="name">Raisins</td>
+                            <tr className="fruit">
+                                <Groceries food={Raisins} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value36"
                                         value={inputValue36}
                                         onChange={handleChangeValue36} />
@@ -1020,10 +1156,11 @@ const Calories = () => {
                                     {(inputValue36 * 2.7).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Cabbage</td>
+                            <tr className="carrot">
+                                <Groceries food={Cabbage} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value37"
                                         value={inputValue37}
                                         onChange={handleChangeValue37} />
@@ -1042,10 +1179,12 @@ const Calories = () => {
                                     {(inputValue37 * 0.22).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Carrot</td>
+                            <tr className="carrot">
+
+                                <Groceries food={Carrot} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value38"
                                         value={inputValue38}
                                         onChange={handleChangeValue38} />
@@ -1064,10 +1203,12 @@ const Calories = () => {
                                     {(inputValue38 * 0.4).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Beetroot</td>
+                            <tr className="carrot">
+
+                                <Groceries food={Beetroot} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value39"
                                         value={inputValue39}
                                         onChange={handleChangeValue39} />
@@ -1086,10 +1227,12 @@ const Calories = () => {
                                     {(inputValue39 * 0.43).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Broccoli</td>
+                            <tr className="carrot">
+
+                                <Groceries food={Broccoli} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value40"
                                         value={inputValue40}
                                         onChange={handleChangeValue40} />
@@ -1108,10 +1251,12 @@ const Calories = () => {
                                     {(inputValue40 * 0.34).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Kale</td>
+                            <tr className="carrot">
+
+                                <Groceries food={Kale} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value41"
                                         value={inputValue41}
                                         onChange={handleChangeValue41} />
@@ -1130,10 +1275,11 @@ const Calories = () => {
                                     {(inputValue41 * 0.5).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Spinach</td>
+                            <tr className="carrot">
+                                <Groceries food={Spinach} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value42"
                                         value={inputValue42}
                                         onChange={handleChangeValue42} />
@@ -1152,10 +1298,11 @@ const Calories = () => {
                                     {(inputValue42 * 0.23).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Zucchini</td>
+                            <tr className="carrot">
+                                <Groceries food={Zucchini} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value43"
                                         value={inputValue43}
                                         onChange={handleChangeValue43} />
@@ -1174,10 +1321,11 @@ const Calories = () => {
                                     {(inputValue43 * 0.16).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Leek</td>
+                            <tr className="carrot">
+                                <Groceries food={Leek} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value44"
                                         value={inputValue44}
                                         onChange={handleChangeValue44} />
@@ -1196,10 +1344,13 @@ const Calories = () => {
                                     {(inputValue44 * 0.61).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Eggplant</td>
+                            <tr className="carrot">
+
+                                <Groceries food={Eggplant} />
+
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value45"
                                         value={inputValue45}
                                         onChange={handleChangeValue45} />
@@ -1218,10 +1369,12 @@ const Calories = () => {
                                     {(inputValue45 * 0.16).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Tomato</td>
+                            <tr className="carrot">
+
+                                <Groceries food={Tomato} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value46"
                                         value={inputValue46}
                                         onChange={handleChangeValue46} />
@@ -1240,10 +1393,11 @@ const Calories = () => {
                                     {(inputValue46 * 0.18).toFixed(1)}
                                 </td>
                             </tr>
-                            <tr className="kupus">
-                                <td className="name">Tomato juice</td>
+                            <tr className="carrot">
+                                <Groceries food={Tomatojuice} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value47"
                                         value={inputValue47}
                                         onChange={handleChangeValue47} />
@@ -1263,9 +1417,10 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="alcohol">
-                                <td className="name">Red wine</td>
+                                <Groceries food={Redwine} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value48"
                                         value={inputValue48}
                                         onChange={handleChangeValue48} />
@@ -1284,9 +1439,11 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="alcohol">
-                                <td className="name">Light beer</td>
+
+                                <Groceries food={beer} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value49"
                                         value={inputValue49}
                                         onChange={handleChangeValue49} />
@@ -1305,9 +1462,11 @@ const Calories = () => {
                                 </td>
                             </tr>
                             <tr className="alcohol">
-                                <td className="name">Brandy</td>
+
+                                <Groceries food={Brandy} />
                                 <td className="protein">
-                                    <input type="number"
+                                    <input className="inputPro"
+                                        type="number"
                                         name="value50"
                                         value={inputValue50}
                                         onChange={handleChangeValue50} />
@@ -1328,8 +1487,8 @@ const Calories = () => {
 
                         </tbody>
                         <tfoot>
-                            <tr >
-                                <td className="name">Total</td>
+                            <tr className="title">
+                                <td style={{ padding: "20px" }}>Total</td>
                                 <td></td>
                                 <td className="protein">
                                     {(Number(inputValue1 * 0.076) + Number(inputValue2 * 0.139) + Number(inputValue3 * 0.09) + Number(inputValue4 * 0.07)
@@ -1388,7 +1547,7 @@ const Calories = () => {
             <div>
 
             </div>
-            <div>{<BackToTop />}</div>
+            {/* <div>{<BackToTop />}</div> */}
         </>
     )
 }

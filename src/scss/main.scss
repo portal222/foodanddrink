@@ -1,14 +1,70 @@
 @import '../scss/_cssreset.scss';
 
 
-$color1: #ece8e8;
-$color2: #89CFF0;
-$color3: #00308F;
+$color1: #014421;
+// $back: #b5ddc9;
+$back: #d5ffe4;
+$back2: green;
+// $backHome:#84c368;
+$homeButt: rgb(51, 114, 58);
+$backHome: #9ec34e;
+$backFood: #ffcc29;
+$backDrink: #b2f0ec;
+$button: #80dfba;
+// $button1: #f3ccff;
+$button1: #8eaaff;
+// $button2: #a555ec;
+$button2: rgb(35, 35, 213);
+$button3: rgb(30, 30, 109);
+$button4: rgb(42, 88, 180);
+$glass1: #8eaaff;
+// $glass2: #a555ec;
+$glass2: rgb(65, 65, 215);
+$glass3: rgb(30, 104, 242);
+$glass4: rgb(231, 255, 254);
+$glassHover1: rgb(40, 40, 185);
+$glassHover2: rgb(17, 17, 95);
+$glassHover3: rgb(171, 171, 253);
+$bGcolor: #8be8e5;
+$bGshadow: #a555ec;
+$bGborder: #c787ff;
+$country1: #f2a56d;
+$country2: #f58634;
+$country3: #6b240c;
+$country4: #6b240c;
+$country5: #bb8c6a;
+$country6: #a55a24;
+$country7: #f7ccbe;
+
+$color2: #b2dfdb;
+$color3: #80cbc4;
 $color4: #FF5F00;
 $color5: #F8D568;
 $color6: #C0362C;
 $color7: #FFBF00;
-$colorHyd: yellow;
+$colorHyd: #aed581;
+$colorProt: #c5e1a5;
+$colormilk: #dcedc8;
+$colorOil: #f1f8e9;
+$colorAlm: #81c784;
+$colorFruit: #a5d6a7;
+$colorCarr: #c8e6c9;
+$carrot: #9de797;
+$colorAlco: #e8f5e9;
+$colorName: #e65100;
+$colorNamehover: #fffcd6;
+$colorFor: grey;
+$colorPag: #00FA9A;
+$colorPagHov: #98FF98;
+$drink1: rgba(83, 160, 186, 0.579);
+$drink2: #0b0c7cf9;
+$measur: rgb(240, 252, 242);
+$ingred1: #e8f4f5;
+$ingred2: #b1c1f1;
+$nameHover: #ef6c00;
+$buttonActive: rgb(246, 250, 216);
+$paper: white;
+
 
 @font-face {
     font-family: mainfont;
@@ -17,7 +73,32 @@ $colorHyd: yellow;
 
 @font-face {
     font-family: navfont;
-    src: url("../../public/Ubuntu-B.ttf");
+    src: url("../../public/Righteous-Regular.ttf");
+}
+
+@font-face {
+    font-family: imgfont;
+    src: url("../../public/Dosis-Medium.ttf");
+}
+
+@font-face {
+    font-family: cocktailName;
+    src: url("../../public/MontserratAlternates-Medium.ttf");
+}
+
+@font-face {
+    font-family: recipeName;
+    src: url("../../public/Parkinsans-Medium.ttf");
+}
+
+@font-face {
+    font-family: category;
+    src: url("../../public/EagleLake-Regular.ttf");
+}
+
+@font-face {
+    font-family: homeTitle;
+    src: url("../../public/Knewave-Regular.ttf");
 }
 
 body {
@@ -27,60 +108,330 @@ body {
 
 .navContainer {
     margin: auto;
-    width: 1200px;
+    width: 1300px;
 
-    height: 80px;
+    height: 70px;
     background-color: $color3;
+
 
     .navigation {
 
-
+        display: flex;
         position: fixed;
         background-color: $color1;
-        width: 1140px;
-        padding: 30px;
-        height: 20px;
+        width: 1300px;
+        // padding: 30px;
+        height: 90px;
+        font-size: 26px;
         font-family: navfont;
-        vertical-align: middle;
+        // vertical-align: middle;
+        z-index: 3;
+        align-items: end;
+        // align-content: end;
+        //  vertical-align: bottom;
 
-        .button {
-            background-image: linear-gradient($color4, $color7);
-            font-weight: bold;
-            border-radius: 10px;
-            padding: 5px 20px;
-            margin: 10px 20px;
+        .button1,
+        .button2,
+        .button3,
+        .button4 {
+            background-image: linear-gradient($button1, $button2);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            display: flex;
+            // font-weight: bold;
+            // width: 90px;
+            height: 20px;
+            // border-radius: 10px;
+            padding: 25px 25px;
+            // margin: 10px 10px;
             text-decoration: none;
-            color: $color6;
+            vertical-align: middle;
+            text-align: center;
+            color: $color1;
+            // border-bottom: solid 3px $button3;
 
             &:hover {
-                background-image: linear-gradient($color4, $color5);
+                // background-image: linear-gradient($button3, $button2);
+                // border-bottom: solid 3px $button;
+                color: $colorNamehover;
 
             }
+        }
+
+        .button1 {
+            // background-image: url(../../public/img/unnamed.png);
+            background-image: linear-gradient($homeButt 10%, $backHome 90%);
+
+            height: 55px;
+            // // align-items: baseline;
+
+            padding: 15px 20px 0px 20px;
+            // text-decoration: none;
+            // font-family: homeTitle;
+            color: $color1;
+            // font-size: 40px;
+            // z-index: 4;
+            width: 90px;
+            text-align: center;
+
+            .logoImg {
+                width: 90px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .button2 {
+            background-image: linear-gradient($color2 10%, $color3 90%);
+        }
+
+        .button3 {
+            background-image: linear-gradient($color4 10%, $backFood 90%);
+        }
+
+        .button4 {
+            background-image: linear-gradient($button4 10%, $backDrink 90%);
+        }
+
+        .button1.active,
+        .button2.active,
+        .button3.active,
+        .button4.active {
+            color: $nameHover;
         }
     }
 }
 
-.food {
+.food,
+.titleLine,
+.titleLineDrink,
+.titleLineFood,
+.home,
+.drinkMain,
+.groceries {
     margin: auto;
-    width: 1200px;
-
+    width: 1300px;
+    // background-image: linear-gradient($back, $back2);
     font-size: 22px;
     display: flex;
 
+    h1 {
+        width: 1300px;
+        text-align: center;
+        font-family: mainFont;
+        font-size: 32px;
+        padding: 35px 0px 15px 0px;
+        color: $color1;
+    }
+
+    h2 {
+        width: 1300px;
+        text-align: center;
+        font-family: homeTitle;
+        font-size: 45px;
+
+    }
+
+    .slide-container {
+        padding-top: 40px;
+        margin: auto;
+        width: 500px;
+    }
+
+    .suggestion,
+    .homeSearch {
+        width: 33%;
+        padding: 0px 30px;
+
+        .drink {
+            position: relative;
+            display: inline-block;
+            // font-family: cocktailName;
+            cursor: pointer;
+
+            .sugestImg {
+                width: 420px;
+            }
+
+            img {
+                width: 420px;
+            }
+
+            .drinkDown {
+                display: none;
+                font-size: 20px;
+                color: $measur;
+                text-align: center;
+                position: absolute;
+                top: 0px;
+                z-index: 2;
+                width: 420px;
+                min-height: 420px;
+                background-image: linear-gradient($drink1, $drink2);
+                vertical-align: bottom;
+
+                .categ {
+                    padding: 20px;
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .measur {
+                    padding: 5px;
+                    text-align: right;
+                }
+
+                .ingred {
+                    padding: 5px;
+                    text-align: left;
+                }
+
+                .instruc {
+                    padding: 20px;
+                    font-size: 22px;
+                    text-align: justify;
+                }
+            }
+
+            &:hover .drinkDown {
+                display: block;
+            }
+        }
+
+        .drinkLink {
+            font-size: 25px;
+            padding: 10px;
+            font-family: cocktailname;
+        }
+    }
+
+    .homeSearch {
+        width: 300px;
+        padding: 0px;
+
+
+        .cont {
+            width: 300px;
+
+            .paper {
+                width: 300px;
+                margin-left: 0px;
+                margin-top: 30px;
+
+                background-color: $paper;
+
+                input {
+                    font-size: 22px;
+                    width: 235px;
+                    overflow: hidden;
+                    padding-left: 10px;
+                }
+
+
+            }
+        }
+    }
+
     .container {
 
-        width: 630px;
-        background-color: #FF5F00;
+        min-width: 450px;
+        // background-color: $back;
+
+        .area {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 5px;
+
+            .countryT {
+                // background-image: linear-gradient($colormilk, $color5);
+                color: $color1;
+                width: 130px;
+                margin: 0px;
+                padding: 10px;
+
+            }
+
+            .country,
+            .glass {
+                width: 130px;
+                padding: 10px;
+                // border-image: linear-gradient($drink1, $country2);
+                border: 1px solid $country3;
+                // border-image: url(../../public/assets/img/green.jpg);
+                // background-image: url(../../public/assets/img/green.jpg);
+                // background-color: $country1;
+                background-image: linear-gradient($country1, $country2);
+
+                border-radius: 8px;
+                color: $country4;
+                margin: 0px;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-image: linear-gradient($country5, $country6);
+                    color: $country7;
+
+
+                }
+
+            }
+
+            .glass {
+                background-image: linear-gradient($glass1, $glass2);
+                border: 1px solid $glass3;
+                color: $glass4;
+
+                &:hover {
+                    background-image: linear-gradient($glassHover1, $glassHover2);
+
+                    color: $glassHover3;
+                }
+
+            }
+        }
+
+        p {
+            text-align: left;
+            margin: 20px 30px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .paper {
+            width: 300px;
+            margin-left: 30px;
+            margin-top: 30px;
+
+            background-color: $paper;
+
+            input {
+                font-size: 22px;
+                width: 220px;
+                overflow: hidden;
+                padding-left: 10px;
+                background-color: $paper;
+
+            }
+
+
+        }
+
 
         .title {
             background-image: linear-gradient($color2, $color3);
-            width: 600px;
-
-      
+            min-width: 650px;
 
             th {
-                padding: 20px 0px;
+                padding: 30px 20px 20px 20px;
                 text-align: left;
+            }
+
+            td {
+                padding: 20px 15px;
             }
         }
 
@@ -89,18 +440,1307 @@ body {
             background-color: $colorHyd;
         }
 
-        input {
-            background-color: #C0362C;
-            width: 50px;
+        .prot {
+            background-color: $colorProt;
         }
+
+        .milk {
+            background-color: $colormilk;
+        }
+
+        .oil {
+            background-color: $colorOil;
+        }
+
+        .almond {
+            background-color: $colorAlm;
+        }
+
+        .fruit {
+            background-color: $colorFruit;
+        }
+
+        .carrot {
+            background-color: $carrot;
+        }
+
+        .alcohol {
+            background-color: $colorAlco;
+        }
+
+        input {
+            background-color: $colorCarr;
+
+            font-size: 20px;
+            padding-left: 10px;
+
+            width: 220px;
+        }
+
         .protein {
             padding: 5px 15px;
-            width: 70px;
+            min-width: 60px;
+            max-width: 60px;
+            overflow: hidden;
+
+            .inputPro {
+                width: 60px;
+                background-color: $colorCarr;
+            }
         }
 
         .name {
-            padding: 5px 20px;
+            padding: 5px 15px;
+            color: $color1;
+            cursor: pointer;
+
+            &:hover {
+                color: $nameHover;
+            }
+        }
+
+        .noLink {
+            padding: 5px 15px;
+            color: $color1;
         }
     }
 
+
+}
+
+.home,
+.titleLine {
+    background-color: $backHome;
+}
+
+.titleLineDrink {
+    background-color: $backDrink;
+
+}
+
+.titleLineFood {
+    background-color: $backFood;
+}
+
+.drinkMain {
+    background-color: $backDrink;
+}
+
+.food {
+    background-color: $backFood;
+}
+
+.groceries {
+    background-color: $back;
+}
+
+.sliderDiv {
+    width: 840px;
+    background-color: $color6;
+
+    margin: auto;
+
+    .imageFood {
+        width: 300px;
+    }
+}
+
+.recipe,
+.drinkGrid,
+.areaMain {
+    margin: auto;
+    width: 1300px;
+    font-size: 22px;
+    background-color: $backHome;
+
+    .abow {
+        height: 70px;
+
+
+    }
+
+    .resTitle {
+        text-align: left;
+        padding: 30px;
+        font-family: cocktailName;
+        font-size: 26px;
+        color: $color1;
+    }
+
+    .results,
+    .resHome {
+        display: flex;
+        padding: 10px 20px;
+
+        .recipeResult {
+            font-weight: 500;
+            padding: 10px;
+            font-size: 28px;
+            width: 700px;
+            font-family: recipeName;
+            cursor: pointer;
+
+            &:hover {
+                color: $colorNamehover;
+            }
+
+        }
+
+        .category {
+            width: 480px;
+            padding: 0px 20px;
+
+            .recipeName2 {
+                font-weight: 500;
+                font-family: category;
+                font-size: 28px;
+                padding: 10px 20px;
+                width: 200px;
+                height: 30px;
+  
+                color: $drink2;
+                text-align: left;
+                cursor: pointer;
+
+                &:hover {
+                    color: $colorNamehover;
+                }
+            }
+
+            .imgThumbCat {
+                padding: 20px;
+                width: 450px;
+            }
+        }
+
+        .descr {
+            width: 700px;
+            text-align: justify;
+        }
+
+
+
+        .imgThumb {
+            padding: 0px;
+            width: 60px;
+            box-shadow: 0px 4px 5px rgb(6, 14, 90);
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0px 4px 5px $colorNamehover;
+            }
+        }
+    }
+
+    .recipeName {
+
+        font-weight: 500;
+        text-align: center;
+        font-size: 28px;
+        padding: 50px 0px 10px 0px;
+        width: 100%;
+        font-family: recipeName;
+
+        // background-image: linear-gradient($carrot, $color4);
+
+
+        p {
+            padding-top: 25px;
+            font-size: 20px;
+        }
+    }
+
+    .mealImg {
+        display: flex;
+
+        padding: 40px 0px;
+        // align-items: stretch;
+        justify-content: center;
+
+        .imgMeal {
+
+            width: 550px;
+
+            // margin-top: 50px;
+        }
+    }
+
+    .glassGrid {
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+
+        .buttonG {
+            background-image: linear-gradient($button1, $button2);
+            border-radius: 20px;
+            padding: 10px 5px;
+            font-size: 20px;
+            text-align: center;
+            color: $bGcolor;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 3px 5px 7px $bGshadow;
+
+            border: 1px solid $bGborder;
+
+
+            &:hover {
+                color: $bGcolor;
+                background-image: linear-gradient($button2, $button3);
+            }
+        }
+
+    }
+
+    img {
+        // padding: 15px;
+        width: 600px;
+    }
+
+    .for,
+    .serving {
+        color: $colorFor;
+        padding: 20px 10px 5px 60px;
+    }
+
+    .serving {
+        color: black;
+    }
+
+    .ingPlace {
+
+        display: flex;
+
+        .recName {
+            width: 100%;
+            margin-top: 140px;
+            text-align: center;
+            font-size: 28px;
+            vertical-align: middle;
+            font-family: cocktailName;
+
+            p {
+                font-size: 18px;
+                text-align: center;
+                padding: 20px;
+            }
+
+
+        }
+
+        .iframe {
+            margin-top: 30px;
+            width: 500px;
+            height: 310px;
+        }
+
+        .imgProps {
+            padding: 40px 40px;
+            width: 550px;
+        }
+
+        p {
+            text-align: right;
+            padding: 25px 40px;
+            font-size: 20px;
+
+        }
+
+        .measPlace {
+            display: flex;
+            width: 50%;
+
+            .measure {
+                display: flex;
+                min-width: 400px;
+                font-size: 28px;
+
+                align-items: center;
+
+                text-align: left;
+                padding: 0px 25px;
+
+            }
+
+            .ingImg {
+                margin: 3px 20px;
+                width: 60px;
+                padding: 0px;
+            }
+
+
+        }
+
+
+
+        .context {
+            // width: 50%;
+            padding: 25px 40px;
+            font-size: 28px;
+            text-align: justify;
+        }
+
+    }
+
+
+    .imageNum {
+        margin: auto;
+        display: flex;
+        width: 1300px;
+        overflow-x: auto;
+        font-family: imgfont;
+
+        background-image: linear-gradient($color1, $button2);
+
+        .another {
+            padding: 8px;
+        }
+
+        .numbIm {
+            padding: 8px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 500;
+            color: $colorName;
+            cursor: pointer;
+
+            &:hover {
+                color: $colorNamehover;
+            }
+
+            &:active {
+                color: $colorName;
+            }
+        }
+
+        .numbActIm {
+            text-align: center;
+            padding: 8px;
+            font-size: 22px;
+            font-weight: 500;
+            background-color: $button2;
+            border-radius: 5px;
+            color: $colorNamehover;
+        }
+    }
+
+    .cocktailGrid {
+        display: grid;
+        padding: 40px;
+        grid-template-columns: auto auto;
+        gap: 20px;
+
+        .wrap {
+            background-image: linear-gradient($ingred1, $ingred2);
+            border-radius: 5px;
+            padding: 20px;
+            width: 550px;
+
+            .cocktailName {
+                font-size: 25px;
+                text-align: center;
+                // font-family: cocktailName;
+            }
+
+            .cocktailCont {
+                padding: 20px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .pagin {
+        margin: 0;
+        padding-bottom: 30px;
+        background-color: $back;
+    }
+
+    .paginDrink {
+        margin: 0;
+        padding-bottom: 30px;
+        background-color: $backDrink;
+    }
+
+    .photo {
+        text-align: center;
+        font-size: 32px;
+
+        .subtitle {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}
+
+.drinkGrid {
+    background-color: $backDrink;
+
+}
+
+.areaMain {
+    background-color: $backFood;
+}
+
+.cocktail {
+    width: 1240px;
+    margin: auto;
+    padding: 30px 30px 0px 30px;
+    background-color: $backDrink;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: auto auto auto;
+
+
+    h3 {
+        background-color: #FFBF00;
+        padding: 20px 0px;
+    }
+
+    .drink {
+        position: relative;
+        display: inline-block;
+        // font-family: cocktailName;
+        cursor: pointer;
+
+        .imgCont {
+            width: 390px;
+            // border: 2px solid rgb(1, 221, 255);
+            //    border-top: 10px solid black;
+            // border: 10px solid rgba(255, 255, 255, 0.447);
+
+            border-radius: 20px;
+
+            img {
+                border-radius: 20px;
+                width: 100%;
+                // display: block;
+                // box-shadow: inset 10px 26px 12px black;
+                // box-shadow: inset 10px 6px 12px black;
+
+
+            }
+        }
+
+        .inerShadow {
+            display: block;
+            position: absolute;
+            top: 0px;
+            z-index: 1;
+            width: 390px;
+            min-height: 390px;
+            // background-image: linear-gradient($drink1, $drink2);
+            box-shadow: inset 0px -25px 25px $backDrink;
+
+
+        }
+
+        .drinkDown {
+            display: none;
+            font-size: 20px;
+            color: $measur;
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            z-index: 2;
+            width: 390px;
+            min-height: 390px;
+            background-image: linear-gradient($drink1, $drink2);
+            vertical-align: bottom;
+            border-radius: 20px;
+
+
+
+
+            .categ {
+                padding: 20px;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .measur {
+                padding: 5px;
+                text-align: right;
+            }
+
+            .ingred {
+                padding: 5px;
+                text-align: left;
+            }
+
+            .instruc {
+                padding: 20px 30px;
+                font-size: 22px;
+                text-align: justify;
+            }
+        }
+
+        &:hover .drinkDown {
+            display: block;
+            box-shadow: inset 0px -25px 25px $backDrink;
+
+        }
+    }
+
+    .drinkLink {
+        font-size: 25px;
+        padding: 10px;
+        text-align: center;
+        font-family: cocktailname;
+        text-shadow: 2px 2px 4px $bGshadow;
+    }
+}
+
+.loader {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $back;
+    width: 1300px;
+    height: 850px;
+    padding-bottom: 200px;
+}
+
+.footer {
+    margin: auto;
+    width: 1300px;
+    height: 550px;
+
+    background-color: $back;
+    display: flex;
+    align-items: end;
+    // justify-content: center;
+    color: grey;
+
+    p {
+        width: 1300px;
+
+        border-top: solid 1px grey;
+        padding: 15px 0px;
+        text-align: center;
+
+    }
+
+}
+
+.arrowup {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    text-align: center;
+    border: 3px solid $color1;
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .navContainer {
+        width: 355px;
+        height: 34px;
+
+        .navigation {
+            width: 355px;
+            // padding: 10px;
+            font-size: 18px;
+            height: 50px;
+
+
+            .button1,
+            .button2,
+            .button3,
+            .button4 {
+
+                height: 14px;
+                padding: 10px 10px;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+
+
+            }
+
+            .button1 {
+
+                height: 20px;
+                padding: 6px 10px 8px 10px;
+                font-size: 20px;
+                width: 55px;
+
+                .logoImg {
+
+                    width: 50px;
+                }
+            }
+        }
+    }
+
+    .food,
+    .titleLine,
+    .titleLineDrink,
+    .titleLineFood,
+    .home,
+    .drinkMain,
+    .groceries {
+
+        width: 355px;
+
+        font-size: 16px;
+        display: block;
+
+        h1 {
+            width: 355px;
+            font-size: 20px;
+            padding: 30px 0px 10px 0px;
+
+        }
+
+        h2 {
+            width: 355px;
+            font-size: 30px;
+        }
+
+        .slide-container {
+            padding: 0px;
+
+            width: 355px;
+        }
+
+        .suggestion,
+        .homeSearch {
+            width: 355px;
+            padding: 0px;
+
+            .drink {
+                cursor: pointer;
+
+                .sugestImg {
+                    width: 355px;
+                }
+
+                img {
+                    width: 355px;
+                }
+
+                .drinkDown {
+                    display: none;
+                    font-size: 18px;
+
+
+                    width: 355px;
+                    min-height: 355px;
+
+
+                    .categ {
+                        padding: 15px;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+
+                    .measur {
+                        padding: 5px;
+                        text-align: right;
+                    }
+
+                    .ingred {
+                        padding: 5px;
+                        text-align: left;
+                    }
+
+                    .instruc {
+                        padding: 20px;
+                        font-size: 22px;
+                        text-align: justify;
+                    }
+                }
+
+                &:hover .drinkDown {
+                    display: block;
+                }
+            }
+
+            .drinkLink {
+                font-size: 20px;
+                padding: 10px;
+
+            }
+        }
+
+        .homeSearch {
+            width: 260px;
+            padding: 0px;
+
+            .cont {
+                width: 260px;
+                padding: 5px 25px;
+
+                .paper {
+                    width: 260px;
+                    margin-left: 0px;
+                    margin-top: 30px;
+
+
+
+                    input {
+                        font-size: 14px;
+                        width: 200px;
+                        overflow: hidden;
+                        padding-left: 10px;
+                    }
+
+                    button {
+                        font-size: 16px;
+                    }
+
+
+                }
+            }
+        }
+
+        .container {
+
+            min-width: 355px;
+
+            .area {
+                padding: 10px;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 3px;
+
+                .countryT {
+
+                    width: 90px;
+                    margin: 0px;
+                    padding: 5px;
+                    font-size: 12px;
+
+                }
+
+                .country,
+                .glass {
+                    width: 90px;
+                    padding: 5px;
+                    font-size: 12px;
+                    border-radius: 5px;
+
+                    margin: 0px;
+
+
+
+                }
+            }
+
+
+            p {
+                text-align: justify;
+                font-size: 18px;
+                margin: 0px 35px;
+                padding: 15px 0px;
+                width: 285px;
+            }
+
+            .paper {
+                width: 285px;
+                margin-left: 35px;
+                margin-top: 15px;
+
+                input {
+
+                    font-size: 14px;
+                    width: 200px;
+                }
+
+                button {
+                    font-size: 16px;
+                }
+
+            }
+
+
+            .title {
+
+                min-width: 355px;
+                font-size: 12px;
+
+                th {
+                    padding: 25px 5px 5px 5px;
+                    text-align: left;
+                }
+
+                td {
+                    padding: 8px 8px;
+                }
+            }
+
+            .hydrates {
+                padding: 5px 10px;
+
+            }
+
+            .prot {
+                background-color: $colorProt;
+            }
+
+            .milk {
+                background-color: $colormilk;
+            }
+
+            .oil {
+                background-color: $colorOil;
+            }
+
+            .almond {
+                background-color: $colorAlm;
+            }
+
+            .fruit {
+                background-color: $colorFruit;
+            }
+
+            .carrot {
+                background-color: $carrot;
+            }
+
+            .alcohol {
+                background-color: $colorAlco;
+            }
+
+            input {
+                // background-color: $colorCarr;
+
+                font-size: 12px;
+                padding-left: 3px;
+
+                width: 220px;
+            }
+
+            .paper {
+                button {
+                    font-size: 14px;
+                }
+            }
+
+            .protein {
+                padding: 5px 10px;
+                min-width: 30px;
+                max-width: 30px;
+
+                .inputPro {
+                    width: 30px;
+                    background-color: $colorCarr;
+                }
+            }
+
+            .name {
+                padding: 5px 10px;
+                color: $color1;
+                cursor: pointer;
+
+                &:hover {
+                    color: $nameHover;
+                }
+            }
+
+            .noLink {
+                padding: 5px 10px;
+                color: $color1;
+            }
+        }
+    }
+
+    .titleLine {
+        display: flex;
+    }
+
+    .titleLineDrink {
+        display: flex;
+    }
+
+    .titleLineFood {
+        display: flex;
+    }
+
+    .recipe,
+    .drinkGrid,
+    .areaMain {
+
+        width: 355px;
+        font-size: 18px;
+
+        .abow {
+            height: 50px;
+        }
+
+        .resTitle {
+
+            padding: 20px;
+
+            font-size: 20px;
+
+        }
+
+        .results,
+        .resHome {
+            display: flex;
+            padding: 10px 20px;
+
+            .recipeResult {
+                font-weight: 300;
+                padding: 10px;
+                font-size: 18px;
+                width: 235px;
+
+
+
+
+            }
+
+            .category {
+                width: 240px;
+                padding: 0px 20px;
+
+                .recipeName2 {
+                    font-weight: 300;
+                    font-size: 24px;
+                    padding: 10px 15px;
+                    width: 200px;
+                    height: 30px;
+                }
+
+                .imgThumbCat {
+                    padding: 5px;
+                    width: 315px;
+                }
+            }
+
+            .descr {
+                width: 320px;
+                text-align: justify;
+            }
+
+            .imgThumbCat {
+                padding: 10px;
+                width: 150px;
+            }
+
+            .imgThumb {
+                width: 60px;
+                box-shadow: 0px 4px 5px rgb(6, 14, 90);
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0px 4px 5px $colorNamehover;
+                }
+            }
+        }
+
+        .resHome {
+            display: block;
+        }
+
+        .recipeName {
+            font-weight: 400;
+            font-size: 18px;
+            padding: 10px;
+            padding-top: 30px;
+
+            p {
+
+                font-size: 14px;
+            }
+        }
+
+        .mealImg {
+            padding: 15px 0px;
+
+            .imgMeal {
+                width: 355px;
+
+                margin-top: 20px;
+            }
+        }
+
+
+        .glassGrid {
+            padding: 10px;
+            gap: 10px;
+            grid-template-columns: auto auto auto;
+
+            .buttonG {
+
+                border-radius: 10px;
+                padding: 10px 5px;
+                font-size: 14px;
+                box-shadow: 0px 5px 6px $bGshadow;
+
+            }
+        }
+
+        img {
+            padding: 10px;
+            width: 335px;
+        }
+
+        .for,
+        .serving {
+
+            padding: 15px 10px 5px 30px;
+        }
+
+        .serving {
+            color: black;
+        }
+
+        .ingPlace {
+
+            display: block;
+
+            .recName {
+                width: 350px;
+                margin-top: 20px;
+                text-align: center;
+                font-size: 20px;
+                vertical-align: middle;
+
+
+                p {
+                    font-size: 12px;
+
+                    padding: 10px;
+                }
+
+
+            }
+
+            .iframe {
+                margin-top: 20px;
+                width: 350px;
+                height: 217px;
+            }
+
+            .imgProps {
+                padding: 20px 0px;
+                width: 355px;
+            }
+
+            p {
+                width: 300px;
+                font-size: 12px;
+                padding: 20px 25px;
+            }
+
+            .measPlace {
+                display: flex;
+                width: 100%;
+
+                .measure {
+                    min-width: 250px;
+
+
+                    padding: 0px 15px;
+                    font-size: 18px;
+
+                }
+
+                .ingImg {
+                    margin: 2px 10px;
+                    width: 40px;
+                    padding: 0px;
+                }
+            }
+
+
+
+            .context {
+                position: relative;
+                width: 315px;
+                padding: 5px 20px;
+                text-align: justify;
+                font-size: 18px;
+            }
+
+        }
+
+        .imageNum {
+
+            display: flex;
+            width: 355px;
+
+            .another {
+                padding: 8px;
+            }
+
+            .numbIm {
+                padding: 5px;
+
+                font-size: 14px;
+                font-weight: 400;
+                // color: $colorName;
+
+            }
+
+            .numbActIm {
+
+                padding: 5px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .cocktailGrid {
+            display: grid;
+            padding: 5px;
+            grid-template-columns: auto;
+            gap: 20px;
+
+            .wrap {
+
+                border-radius: 5px;
+                padding: 15px;
+                width: 315px;
+
+                .cocktailName {
+                    font-size: 18px;
+
+                }
+
+                .cocktailCont {
+                    padding: 15px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .pagin {
+            margin: 0;
+            padding-bottom: 20px;
+
+        }
+
+        .photo {
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+
+    .cocktail {
+        width: 325px;
+
+        padding: 35px 15px 0px 15px;
+
+
+        gap: 10px;
+        grid-template-columns: auto auto;
+
+
+
+        .drink {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+            .imgCont {
+                width: 160px;
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            .inerShadow {
+
+
+                width: 160px;
+                min-height: 160px;
+                // background-image: linear-gradient($drink1, $drink2);
+                box-shadow: inset 0px -20px 20px $backDrink;
+
+
+            }
+
+            .drinkDown {
+
+                font-size: 16px;
+
+
+
+
+                width: 160px;
+                min-height: 160px;
+
+                border-radius: 10px;
+
+                .categ {
+                    padding: 10px;
+                    font-size: 13px;
+
+                }
+
+                .measur {
+                    padding: 2px;
+                    text-align: right;
+                    font-size: 12px;
+
+                }
+
+                .ingred {
+                    padding: 2px;
+                    text-align: left;
+                    font-size: 12px;
+
+                }
+
+                .instruc {
+                    padding: 10px 20px;
+                    font-size: 12px;
+
+                }
+            }
+
+            &:hover .drinkDown {
+                display: block;
+            }
+        }
+
+        .drinkLink {
+            font-size: 18px;
+            padding: 10px;
+        }
+    }
+
+    .loader {
+        width: 355px;
+        height: 750px;
+        padding-bottom: 200px;
+    }
+
+    .footer {
+        margin: auto;
+        width: 355px;
+        height: 350px;
+        display: flex;
+        align-items: end;
+        color: grey;
+
+        p {
+            width: 355px;
+            padding: 15px 0px;
+        }
+
+    }
+
+    .arrowup {
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        text-align: center;
+        border: 3px solid $color1;
+    }
 }
