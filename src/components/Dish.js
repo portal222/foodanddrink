@@ -9,9 +9,9 @@ import dish1 from "../../public/assets/img/soup.jpg";
 import dish2 from "../../public/assets/img/beef.jpg";
 import dish3 from "../../public/assets/img/pad.jpg"
 import dish4 from "../../public/assets/img/pork.jpg"
-import dish5 from "../../public/assets/img/fish.JPG"
-import dish6 from "../../public/assets/img/chicken.JPG"
-import dish7 from "../../public/assets/img/bread.JPG"
+import dish5 from "../../public/assets/img/fish.jpg"
+import dish6 from "../../public/assets/img/chicken.jpg"
+import dish7 from "../../public/assets/img/bread.jpg"
 
 const Dish = () => {
 
