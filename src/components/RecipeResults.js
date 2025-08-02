@@ -9,25 +9,17 @@ const RecipeResults = () => {
     const [error, setError] = useState(null);
     const [recipe, setRecipe] = useState([]);
     const [recipe2, setRecipe2] = useState([]);
-
     const [firstLetter, setFirstLetter] = useState([]);
-
-
     const [isLoading, setIsLoading] = useState(true);
 
     const navigate = useNavigate();
 
-
     const globalCtx = useContext(GlobalContext);
     const searchStringValue = globalCtx.searchStringValue;
-
-
 
     useEffect(() => {
         getRecipe(searchStringValue);
     }, [searchStringValue]);
-
-
 
     const getRecipe = async (searchStringValue) => {
 
@@ -42,17 +34,14 @@ const RecipeResults = () => {
             const responseFirst = await axios.get(urlFirst);
             const responseArea = await axios.get(urlArea);
 
-
             const data = response.data;
             const dataIng = responseIng.data;
             const dataFirst = responseFirst.data;
             const dataArea = responseArea.data;
 
-
             setRecipe(data.meals);
             setRecipe2(dataIng.meals);
             setFirstLetter(dataFirst.meals)
-
             setIsLoading(false);
 
         } catch (err) {
@@ -65,8 +54,6 @@ const RecipeResults = () => {
         navigate(LinkTo);
     }
 
-
-
     if (isLoading) {
         return <Loader />
     } else if (recipe == null && recipe2 == null && firstLetter == "no data found") {
@@ -74,14 +61,12 @@ const RecipeResults = () => {
             <>
                 <div className="food">
                     <div className="container">
-                        <p>Nothing found</p>
+                        <p>{searchStringValue} not found</p>
                         <Search />
                     </div>
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
-
             </>
         )
     } else if (recipe2 == null && firstLetter == "no data found") {
@@ -118,7 +103,6 @@ const RecipeResults = () => {
                     ))}
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
             </>
         )
@@ -154,9 +138,7 @@ const RecipeResults = () => {
                     ))}
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
-
             </>
         )
     } else if (recipe == null && recipe2 == null) {
@@ -172,9 +154,7 @@ const RecipeResults = () => {
                 </div>
                 <div className="areaMain">
                     {firstLetter.map((dataObj, id) => (
-
                         <div key={id} className="results">
-
                             <div className="recipeResult"
                                 onClick={() => {
                                     handleClick(dataObj.idMeal);
@@ -230,12 +210,10 @@ const RecipeResults = () => {
                     ))}
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
             </>
         )
     } else if (firstLetter == "no data found") {
-
         return (
             <>
                 <div className="titleLineFood">
@@ -295,7 +273,6 @@ const RecipeResults = () => {
                     ))}
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
             </>
         );
@@ -341,7 +318,6 @@ const RecipeResults = () => {
                 </h1>
             </div>
             <div className="areaMain">
-
                 {recipe2.map((dataObj, id) => (
                     <div key={id} className="results">
                         <div className="recipeResult"
@@ -362,7 +338,6 @@ const RecipeResults = () => {
                 ))}
             </div>
             <div className="food" style={{ height: "300px" }}></div>
-
             <div className="footer"></div>
         </>
     );

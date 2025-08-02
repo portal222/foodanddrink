@@ -3,21 +3,26 @@ import axios from 'axios';
 import Loader from "./Loader";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Search from "./Search";
 
 const RecipeResultsGro = () => {
     const [error, setError] = useState(null);
     const [recipe, setRecipe] = useState([]);
     const [dish, setDish] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+   
+
 
     const navigate = useNavigate()
     const paramas = useParams()
     const groceries = paramas.groceries
 
+   
+
     useEffect(() => {
         getRecipe(groceries);
     }, [groceries]);
-   
+
 
     const getRecipe = async () => {
         const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${groceries}`
@@ -51,23 +56,23 @@ const RecipeResultsGro = () => {
         return <Loader />
     } else if (recipe == null && dish == null) {
         return (
-            <>
-                <div className="food">
-
-                    <p className="resTitle">
-                        {groceries} not found
-                    </p>
-                    <hr></hr>
+            <>    
+                      <div className="food">
+                    <div className="container">
+                        <p>{groceries} not found</p>
+                        <Search />
+                    </div>
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
+
+                <div className="footer"></div>
             </>
         )
     } else if (dish == null) {
         return (
 
             <>
-
-                <div className="titleLineFood">
+                <div className="titleLineFood"> 
                     <h1>
                         groceries {groceries}
                     </h1>
@@ -110,6 +115,7 @@ const RecipeResultsGro = () => {
 
             <>
                 <div className="titleLineFood">
+                    
                     <h1>
                         Dish by name {groceries}
                     </h1>
@@ -150,8 +156,6 @@ const RecipeResultsGro = () => {
     }
     return (
         <>
-
-
             <div className="titleLineFood">
                 <h1>
                     groceries {groceries}

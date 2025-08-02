@@ -1,24 +1,18 @@
 @import '../scss/_cssreset.scss';
 
-
 $color1: #014421;
-// $back: #b5ddc9;
 $back: #d5ffe4;
 $back2: green;
-// $backHome:#84c368;
 $homeButt: rgb(51, 114, 58);
 $backHome: #9ec34e;
 $backFood: #ffcc29;
 $backDrink: #b2f0ec;
 $button: #80dfba;
-// $button1: #f3ccff;
 $button1: #8eaaff;
-// $button2: #a555ec;
 $button2: rgb(35, 35, 213);
 $button3: rgb(30, 30, 109);
 $button4: rgb(42, 88, 180);
 $glass1: #8eaaff;
-// $glass2: #a555ec;
 $glass2: rgb(65, 65, 215);
 $glass3: rgb(30, 104, 242);
 $glass4: rgb(231, 255, 254);
@@ -35,7 +29,6 @@ $country4: #6b240c;
 $country5: #bb8c6a;
 $country6: #a55a24;
 $country7: #f7ccbe;
-
 $color2: #b2dfdb;
 $color3: #80cbc4;
 $color4: #FF5F00;
@@ -64,7 +57,10 @@ $ingred2: #b1c1f1;
 $nameHover: #ef6c00;
 $buttonActive: rgb(246, 250, 216);
 $paper: white;
-
+$history: rgb(200, 252, 239);
+$history2: rgb(191, 228, 219);
+$buttRes: rgb(155, 74, 74);
+$buttResHov: rgb(93, 31, 31);
 
 @font-face {
     font-family: mainfont;
@@ -109,26 +105,19 @@ body {
 .navContainer {
     margin: auto;
     width: 1300px;
-
     height: 70px;
     background-color: $color3;
 
-
     .navigation {
-
         display: flex;
         position: fixed;
         background-color: $color1;
         width: 1300px;
-        // padding: 30px;
         height: 90px;
         font-size: 26px;
         font-family: navfont;
-        // vertical-align: middle;
         z-index: 3;
         align-items: end;
-        // align-content: end;
-        //  vertical-align: bottom;
 
         .button1,
         .button2,
@@ -138,39 +127,24 @@ body {
             border-top-right-radius: 15px;
             border-top-left-radius: 15px;
             display: flex;
-            // font-weight: bold;
-            // width: 90px;
             height: 20px;
-            // border-radius: 10px;
             padding: 25px 25px;
-            // margin: 10px 10px;
             text-decoration: none;
             vertical-align: middle;
             text-align: center;
             color: $color1;
-            // border-bottom: solid 3px $button3;
 
             &:hover {
-                // background-image: linear-gradient($button3, $button2);
-                // border-bottom: solid 3px $button;
                 color: $colorNamehover;
 
             }
         }
 
         .button1 {
-            // background-image: url(../../public/img/unnamed.png);
             background-image: linear-gradient($homeButt 10%, $backHome 90%);
-
             height: 55px;
-            // // align-items: baseline;
-
             padding: 15px 20px 0px 20px;
-            // text-decoration: none;
-            // font-family: homeTitle;
             color: $color1;
-            // font-size: 40px;
-            // z-index: 4;
             width: 90px;
             text-align: center;
 
@@ -213,7 +187,6 @@ body {
 .groceries {
     margin: auto;
     width: 1300px;
-    // background-image: linear-gradient($back, $back2);
     font-size: 22px;
     display: flex;
 
@@ -231,7 +204,6 @@ body {
         text-align: center;
         font-family: homeTitle;
         font-size: 45px;
-
     }
 
     .slide-container {
@@ -248,7 +220,6 @@ body {
         .drink {
             position: relative;
             display: inline-block;
-            // font-family: cocktailName;
             cursor: pointer;
 
             .sugestImg {
@@ -311,7 +282,6 @@ body {
         width: 300px;
         padding: 0px;
 
-
         .cont {
             width: 300px;
 
@@ -319,7 +289,6 @@ body {
                 width: 300px;
                 margin-left: 0px;
                 margin-top: 30px;
-
                 background-color: $paper;
 
                 input {
@@ -328,8 +297,6 @@ body {
                     overflow: hidden;
                     padding-left: 10px;
                 }
-
-
             }
         }
     }
@@ -337,7 +304,6 @@ body {
     .container {
 
         min-width: 450px;
-        // background-color: $back;
 
         .area {
             padding: 20px;
@@ -346,25 +312,18 @@ body {
             gap: 5px;
 
             .countryT {
-                // background-image: linear-gradient($colormilk, $color5);
                 color: $color1;
                 width: 130px;
                 margin: 0px;
                 padding: 10px;
-
             }
 
             .country,
             .glass {
                 width: 130px;
                 padding: 10px;
-                // border-image: linear-gradient($drink1, $country2);
                 border: 1px solid $country3;
-                // border-image: url(../../public/assets/img/green.jpg);
-                // background-image: url(../../public/assets/img/green.jpg);
-                // background-color: $country1;
                 background-image: linear-gradient($country1, $country2);
-
                 border-radius: 8px;
                 color: $country4;
                 margin: 0px;
@@ -374,10 +333,7 @@ body {
                 &:hover {
                     background-image: linear-gradient($country5, $country6);
                     color: $country7;
-
-
                 }
-
             }
 
             .glass {
@@ -390,7 +346,6 @@ body {
 
                     color: $glassHover3;
                 }
-
             }
         }
 
@@ -405,7 +360,6 @@ body {
             width: 300px;
             margin-left: 30px;
             margin-top: 30px;
-
             background-color: $paper;
 
             input {
@@ -414,12 +368,8 @@ body {
                 overflow: hidden;
                 padding-left: 10px;
                 background-color: $paper;
-
             }
-
-
         }
-
 
         .title {
             background-image: linear-gradient($color2, $color3);
@@ -431,7 +381,12 @@ body {
             }
 
             td {
-                padding: 20px 15px;
+                padding: 20px 10px;
+            }
+
+            .total {
+                padding: 15px 10px;
+                font-size: 24px;
             }
         }
 
@@ -470,15 +425,13 @@ body {
 
         input {
             background-color: $colorCarr;
-
             font-size: 20px;
             padding-left: 10px;
-
             width: 220px;
         }
 
         .protein {
-            padding: 5px 15px;
+            padding: 5px 10px;
             min-width: 60px;
             max-width: 60px;
             overflow: hidden;
@@ -491,6 +444,7 @@ body {
 
         .name {
             padding: 5px 15px;
+            width: 150px;
             color: $color1;
             cursor: pointer;
 
@@ -503,8 +457,21 @@ body {
             padding: 5px 15px;
             color: $color1;
         }
-    }
 
+        .buttReset {
+            margin: 10px 20px;
+            padding: 5px 10px;
+            background-color: $buttRes;
+            color: antiquewhite;
+            cursor: pointer;
+            border: 2px solid antiquewhite;
+            border-radius: 7px;
+
+            &:hover {
+                background-color: $buttResHov;
+            }
+        }
+    }
 
 }
 
@@ -537,7 +504,6 @@ body {
 .sliderDiv {
     width: 840px;
     background-color: $color6;
-
     margin: auto;
 
     .imageFood {
@@ -555,8 +521,6 @@ body {
 
     .abow {
         height: 70px;
-
-
     }
 
     .resTitle {
@@ -583,7 +547,6 @@ body {
             &:hover {
                 color: $colorNamehover;
             }
-
         }
 
         .category {
@@ -597,7 +560,6 @@ body {
                 padding: 10px 20px;
                 width: 200px;
                 height: 30px;
-  
                 color: $drink2;
                 text-align: left;
                 cursor: pointer;
@@ -618,8 +580,6 @@ body {
             text-align: justify;
         }
 
-
-
         .imgThumb {
             padding: 0px;
             width: 60px;
@@ -634,16 +594,12 @@ body {
     }
 
     .recipeName {
-
         font-weight: 500;
         text-align: center;
         font-size: 28px;
         padding: 50px 0px 10px 0px;
         width: 100%;
         font-family: recipeName;
-
-        // background-image: linear-gradient($carrot, $color4);
-
 
         p {
             padding-top: 25px;
@@ -653,16 +609,11 @@ body {
 
     .mealImg {
         display: flex;
-
         padding: 40px 0px;
-        // align-items: stretch;
         justify-content: center;
 
         .imgMeal {
-
             width: 550px;
-
-            // margin-top: 50px;
         }
     }
 
@@ -684,20 +635,16 @@ body {
             align-items: center;
             justify-content: center;
             box-shadow: 3px 5px 7px $bGshadow;
-
             border: 1px solid $bGborder;
-
 
             &:hover {
                 color: $bGcolor;
                 background-image: linear-gradient($button2, $button3);
             }
         }
-
     }
 
     img {
-        // padding: 15px;
         width: 600px;
     }
 
@@ -728,8 +675,6 @@ body {
                 text-align: center;
                 padding: 20px;
             }
-
-
         }
 
         .iframe {
@@ -747,7 +692,6 @@ body {
             text-align: right;
             padding: 25px 40px;
             font-size: 20px;
-
         }
 
         .measPlace {
@@ -758,12 +702,9 @@ body {
                 display: flex;
                 min-width: 400px;
                 font-size: 28px;
-
                 align-items: center;
-
                 text-align: left;
                 padding: 0px 25px;
-
             }
 
             .ingImg {
@@ -771,21 +712,14 @@ body {
                 width: 60px;
                 padding: 0px;
             }
-
-
         }
 
-
-
         .context {
-            // width: 50%;
             padding: 25px 40px;
             font-size: 28px;
             text-align: justify;
         }
-
     }
-
 
     .imageNum {
         margin: auto;
@@ -793,7 +727,6 @@ body {
         width: 1300px;
         overflow-x: auto;
         font-family: imgfont;
-
         background-image: linear-gradient($color1, $button2);
 
         .another {
@@ -843,7 +776,6 @@ body {
             .cocktailName {
                 font-size: 25px;
                 text-align: center;
-                // font-family: cocktailName;
             }
 
             .cocktailCont {
@@ -878,7 +810,6 @@ body {
 
 .drinkGrid {
     background-color: $backDrink;
-
 }
 
 .areaMain {
@@ -894,7 +825,6 @@ body {
     gap: 35px;
     grid-template-columns: auto auto auto;
 
-
     h3 {
         background-color: #FFBF00;
         padding: 20px 0px;
@@ -903,25 +833,15 @@ body {
     .drink {
         position: relative;
         display: inline-block;
-        // font-family: cocktailName;
         cursor: pointer;
 
         .imgCont {
             width: 390px;
-            // border: 2px solid rgb(1, 221, 255);
-            //    border-top: 10px solid black;
-            // border: 10px solid rgba(255, 255, 255, 0.447);
-
             border-radius: 20px;
 
             img {
                 border-radius: 20px;
                 width: 100%;
-                // display: block;
-                // box-shadow: inset 10px 26px 12px black;
-                // box-shadow: inset 10px 6px 12px black;
-
-
             }
         }
 
@@ -932,10 +852,7 @@ body {
             z-index: 1;
             width: 390px;
             min-height: 390px;
-            // background-image: linear-gradient($drink1, $drink2);
             box-shadow: inset 0px -25px 25px $backDrink;
-
-
         }
 
         .drinkDown {
@@ -951,9 +868,6 @@ body {
             background-image: linear-gradient($drink1, $drink2);
             vertical-align: bottom;
             border-radius: 20px;
-
-
-
 
             .categ {
                 padding: 20px;
@@ -981,7 +895,6 @@ body {
         &:hover .drinkDown {
             display: block;
             box-shadow: inset 0px -25px 25px $backDrink;
-
         }
     }
 
@@ -1009,22 +922,17 @@ body {
     margin: auto;
     width: 1300px;
     height: 550px;
-
     background-color: $back;
     display: flex;
     align-items: end;
-    // justify-content: center;
     color: grey;
 
     p {
         width: 1300px;
-
         border-top: solid 1px grey;
         padding: 15px 0px;
         text-align: center;
-
     }
-
 }
 
 .arrowup {
@@ -1033,6 +941,58 @@ body {
     border-radius: 4px;
     text-align: center;
     border: 3px solid $color1;
+}
+
+.history {
+    margin: auto;
+    width: 700px;
+    background-color: $history;
+    border: 2px solid $color2;
+
+    th {
+        padding: 20px;
+        font-size: 25px;
+    }
+
+    .dates {
+        text-align: left;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    tr {
+        background-color: $history;
+
+        &:nth-child(even) {
+            background-color: $history2;
+        }
+    }
+
+    td {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+}
+
+.resHis {
+    margin: auto;
+    width: 700px;
+    display: flex;
+    justify-content: right;
+
+    .buttHis {
+        margin: 10px 20px;
+        padding: 5px 10px;
+        background-color: $buttRes;
+        color: antiquewhite;
+        cursor: pointer;
+        border: 2px solid antiquewhite;
+        border-radius: 7px;
+
+        &:hover {
+            background-color: $buttResHov;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1047,27 +1007,20 @@ body {
 
         .navigation {
             width: 355px;
-            // padding: 10px;
             font-size: 18px;
             height: 50px;
-
 
             .button1,
             .button2,
             .button3,
             .button4 {
-
                 height: 14px;
                 padding: 10px 10px;
                 border-top-right-radius: 8px;
                 border-top-left-radius: 8px;
-
-
-
             }
 
             .button1 {
-
                 height: 20px;
                 padding: 6px 10px 8px 10px;
                 font-size: 20px;
@@ -1088,17 +1041,14 @@ body {
     .home,
     .drinkMain,
     .groceries {
-
         width: 355px;
-
-        font-size: 16px;
+        font-size: 14px;
         display: block;
 
         h1 {
             width: 355px;
             font-size: 20px;
             padding: 30px 0px 10px 0px;
-
         }
 
         h2 {
@@ -1108,7 +1058,6 @@ body {
 
         .slide-container {
             padding: 0px;
-
             width: 355px;
         }
 
@@ -1131,8 +1080,6 @@ body {
                 .drinkDown {
                     display: none;
                     font-size: 18px;
-
-
                     width: 355px;
                     min-height: 355px;
 
@@ -1168,7 +1115,6 @@ body {
             .drinkLink {
                 font-size: 20px;
                 padding: 10px;
-
             }
         }
 
@@ -1185,8 +1131,6 @@ body {
                     margin-left: 0px;
                     margin-top: 30px;
 
-
-
                     input {
                         font-size: 14px;
                         width: 200px;
@@ -1197,8 +1141,6 @@ body {
                     button {
                         font-size: 16px;
                     }
-
-
                 }
             }
         }
@@ -1219,7 +1161,6 @@ body {
                     margin: 0px;
                     padding: 5px;
                     font-size: 12px;
-
                 }
 
                 .country,
@@ -1228,14 +1169,9 @@ body {
                     padding: 5px;
                     font-size: 12px;
                     border-radius: 5px;
-
                     margin: 0px;
-
-
-
                 }
             }
-
 
             p {
                 text-align: justify;
@@ -1259,12 +1195,9 @@ body {
                 button {
                     font-size: 16px;
                 }
-
             }
 
-
             .title {
-
                 min-width: 355px;
                 font-size: 12px;
 
@@ -1275,6 +1208,11 @@ body {
 
                 td {
                     padding: 8px 8px;
+                }
+
+                .total {
+                    padding: 12px 10px;
+                    font-size: 15px;
                 }
             }
 
@@ -1312,11 +1250,8 @@ body {
             }
 
             input {
-                // background-color: $colorCarr;
-
                 font-size: 12px;
                 padding-left: 3px;
-
                 width: 220px;
             }
 
@@ -1338,7 +1273,8 @@ body {
             }
 
             .name {
-                padding: 5px 10px;
+                padding: 5px 8px;
+                width: 100px;
                 color: $color1;
                 cursor: pointer;
 
@@ -1369,7 +1305,6 @@ body {
     .recipe,
     .drinkGrid,
     .areaMain {
-
         width: 355px;
         font-size: 18px;
 
@@ -1378,11 +1313,8 @@ body {
         }
 
         .resTitle {
-
             padding: 20px;
-
             font-size: 20px;
-
         }
 
         .results,
@@ -1395,10 +1327,6 @@ body {
                 padding: 10px;
                 font-size: 18px;
                 width: 235px;
-
-
-
-
             }
 
             .category {
@@ -1452,7 +1380,6 @@ body {
             padding-top: 30px;
 
             p {
-
                 font-size: 14px;
             }
         }
@@ -1474,12 +1401,10 @@ body {
             grid-template-columns: auto auto auto;
 
             .buttonG {
-
                 border-radius: 10px;
                 padding: 10px 5px;
                 font-size: 14px;
                 box-shadow: 0px 5px 6px $bGshadow;
-
             }
         }
 
@@ -1509,14 +1434,10 @@ body {
                 font-size: 20px;
                 vertical-align: middle;
 
-
                 p {
                     font-size: 12px;
-
                     padding: 10px;
                 }
-
-
             }
 
             .iframe {
@@ -1542,11 +1463,8 @@ body {
 
                 .measure {
                     min-width: 250px;
-
-
                     padding: 0px 15px;
                     font-size: 18px;
-
                 }
 
                 .ingImg {
@@ -1556,8 +1474,6 @@ body {
                 }
             }
 
-
-
             .context {
                 position: relative;
                 width: 315px;
@@ -1565,11 +1481,9 @@ body {
                 text-align: justify;
                 font-size: 18px;
             }
-
         }
 
         .imageNum {
-
             display: flex;
             width: 355px;
 
@@ -1579,15 +1493,11 @@ body {
 
             .numbIm {
                 padding: 5px;
-
                 font-size: 14px;
                 font-weight: 400;
-                // color: $colorName;
-
             }
 
             .numbActIm {
-
                 padding: 5px;
                 font-size: 18px;
                 font-weight: 500;
@@ -1621,7 +1531,6 @@ body {
         .pagin {
             margin: 0;
             padding-bottom: 20px;
-
         }
 
         .photo {
@@ -1632,14 +1541,9 @@ body {
 
     .cocktail {
         width: 325px;
-
         padding: 35px 15px 0px 15px;
-
-
         gap: 10px;
         grid-template-columns: auto auto;
-
-
 
         .drink {
             position: relative;
@@ -1655,52 +1559,37 @@ body {
             }
 
             .inerShadow {
-
-
                 width: 160px;
                 min-height: 160px;
-                // background-image: linear-gradient($drink1, $drink2);
                 box-shadow: inset 0px -20px 20px $backDrink;
-
-
             }
 
             .drinkDown {
-
                 font-size: 16px;
-
-
-
-
                 width: 160px;
                 min-height: 160px;
-
                 border-radius: 10px;
 
                 .categ {
                     padding: 10px;
                     font-size: 13px;
-
                 }
 
                 .measur {
                     padding: 2px;
                     text-align: right;
                     font-size: 12px;
-
                 }
 
                 .ingred {
                     padding: 2px;
                     text-align: left;
                     font-size: 12px;
-
                 }
 
                 .instruc {
                     padding: 10px 20px;
                     font-size: 12px;
-
                 }
             }
 
@@ -1733,7 +1622,6 @@ body {
             width: 355px;
             padding: 15px 0px;
         }
-
     }
 
     .arrowup {
@@ -1742,5 +1630,30 @@ body {
         border-radius: 4px;
         text-align: center;
         border: 3px solid $color1;
+    }
+
+    .history {
+        width: 355px;
+        border: 1px solid $color2;
+
+        th {
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        .dates {
+            text-align: left;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        td {
+            font-size: 16px;
+            padding: 8px 15px;
+        }
+    }
+
+    .resHis {
+        width: 355px;
     }
 }

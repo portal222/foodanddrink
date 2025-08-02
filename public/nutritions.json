@@ -1,0 +1,380 @@
+[
+    {
+        "id": 1,
+        "name": "Rice",
+        "category": "hydrates",
+        "protein": 0.076,
+        "carbon": 0.78,
+        "fat": 0,
+        "calories": 3.51
+    },
+    {
+        "id": 2,
+        "name": "Oatmeal",
+        "category": "hydrates",
+        "protein": 0.139,
+        "carbon": 0.644,
+        "fat": 0,
+        "calories": 3.74
+    },
+    {
+        "id": 3,
+        "name": "Potato",
+        "category": "hydrates",
+        "protein": 0.09,
+        "carbon": 0.2,
+        "fat": 0,
+        "calories": 0.85
+    },
+    {
+        "id": 4,
+        "name": "Corn",
+        "category": "hydrates",
+        "protein": 0.07,
+        "carbon": 0.77,
+        "fat": 0.015,
+        "calories": 3.5
+    },
+    {
+        "id": 5,
+        "name": "Spaghetti",
+        "category": "hydrates",
+        "protein": 0.12,
+        "carbon": 0.63,
+        "fat": 0.018,
+        "calories": 3.37
+    },
+    {
+        "id": 6,
+        "name": "Lens",
+        "category": "protein",
+        "protein": 0.25,
+        "carbon": 0.6,
+        "fat": 0.01,
+        "calories": 3.4
+    },
+    {
+        "id": 7,
+        "name": "Peas",
+        "category": "protein",
+        "protein": 0.22,
+        "carbon": 0.56,
+        "fat": 0.01,
+        "calories": 3.1
+    },
+    {
+        "id": 8,
+        "name": "Bean",
+        "category": "protein",
+        "protein": 0.21,
+        "carbon": 0.45,
+        "fat": 0.016,
+        "calories": 2.7
+    },
+    {
+        "id": 9,
+        "name": "Tuna",
+        "category": "protein",
+        "protein": 0.23,
+        "carbon": 0,
+        "fat": 0.209,
+        "calories": 2.84
+    },
+    {
+        "id": 10,
+        "name": "Chicken",
+        "category": "protein",
+        "protein": 0.208,
+        "carbon": 0,
+        "fat": 0.068,
+        "calories": 1.45
+    },
+    {
+        "id": 11,
+        "name": "Turkey",
+        "category": "protein",
+        "protein": 0.19,
+        "carbon": 0,
+        "fat": 0.01,
+        "calories": 0.95
+    },
+    {
+        "id": 12,
+        "name": "Beef",
+        "category": "protein",
+        "protein": 0.195,
+        "carbon": 0,
+        "fat": 0.125,
+        "calories": 1.19
+    },
+    {
+        "id": 13,
+        "name": "Pork",
+        "category": "protein",
+        "protein": 0.2,
+        "carbon": 0,
+        "fat": 0.09,
+        "calories": 1.61
+    },
+    {
+        "id": 14,
+        "name": "Egg",
+        "category": "protein",
+        "protein": 6,
+        "carbon": 0,
+        "fat": 5,
+        "calories": 89.1
+    },
+    {
+        "id": 15,
+        "name": "Butter",
+        "category": "milk",
+        "protein": 0.01,
+        "carbon": 0,
+        "fat": 0.83,
+        "calories": 7.5
+    },
+    {
+        "id": 16,
+        "name": "Milk",
+        "category": "milk",
+        "protein": 0.03,
+        "carbon": 0.045,
+        "fat": 0.28,
+        "calories": 0.56
+    },
+    {
+        "id": 17,
+        "name": "Cottage",
+        "category": "milk",
+        "protein": 0.125,
+        "carbon": 0.04,
+        "fat": 0.055,
+        "calories": 1.15
+    },
+    {
+        "id": 18,
+        "name": "Yogurt",
+        "category": "milk",
+        "protein": 0.032,
+        "carbon": 0.035,
+        "fat": 0.028,
+        "calories": 0.52
+    },
+    {
+        "id": 19,
+        "name": "Parmesan",
+        "category": "milk",
+        "protein": 0.43,
+        "carbon": 0.03,
+        "fat": 0.35,
+        "calories": 5
+    },
+    {
+        "id": 20,
+        "name": "Oliveoil",
+        "category": "oil",
+        "protein": 0,
+        "carbon": 0,
+        "fat": 1,
+        "calories": 8.84
+    },
+    {
+        "id": 21,
+        "name": "Olives",
+        "category": "oil",
+        "protein": 0,
+        "carbon": 0,
+        "fat": 0.14,
+        "calories": 1.46
+    },
+    {
+        "id": 22,
+        "name": "Coconutoil",
+        "category": "oil",
+        "protein": 0,
+        "carbon": 0,
+        "fat": 1,
+        "calories": 8.9
+    },
+    {
+        "id": 23,
+        "name": "Coconut",
+        "category": "almond",
+        "protein": 0.03,
+        "carbon": 0.15,
+        "fat": 0.335,
+        "calories": 3.54
+    },
+    {
+        "id": 24,
+        "name": "Almond",
+        "category": "almond",
+        "protein": 0.22,
+        "carbon": 0.2,
+        "fat": 0.54,
+        "calories": 6.34
+    },
+    {
+        "id": 25,
+        "name": "Walnut",
+        "category": "almond",
+        "protein": 0,
+        "carbon": 0,
+        "fat": 0.622,
+        "calories": 6.77
+    },
+    {
+        "id": 26,
+        "name": "Hazelnut",
+        "category": "almond",
+        "protein": 0,
+        "carbon": 0,
+        "fat": 0.605,
+        "calories": 6.57
+    },
+    {
+        "id": 27,
+        "name": "Sunflower",
+        "category": "almond",
+        "protein": 0.2,
+        "carbon": 0.2,
+        "fat": 0.515,
+        "calories": 5.84
+    },
+    {
+        "id": 28,
+        "name": "Flax",
+        "category": "almond",
+        "protein": 0.18,
+        "carbon": 0.28,
+        "fat": 0.42,
+        "calories": 5.34
+    },
+    {
+        "id": 29,
+        "name": "Cabbage",
+        "category": "carrot",
+        "protein": 0.02,
+        "carbon": 0.03,
+        "fat": 0,
+        "calories": 0.22
+    },
+    {
+        "id": 30,
+        "name": "Carrot",
+        "category": "carrot",
+        "protein": 0.01,
+        "carbon": 0.09,
+        "fat": 0,
+        "calories": 0.4
+    },
+    {
+        "id": 31,
+        "name": "Beetroot",
+        "category": "carrot",
+        "protein": 0.016,
+        "carbon": 0.1,
+        "fat": 0,
+        "calories": 0.43
+    },
+    {
+        "id": 32,
+        "name": "Broccoli",
+        "category": "carrot",
+        "protein": 0.03,
+        "carbon": 0.07,
+        "fat": 0,
+        "calories": 0.34
+    },
+    {
+        "id": 33,
+        "name": "Kale",
+        "category": "carrot",
+        "protein": 0.02,
+        "carbon": 0.1,
+        "fat": 0,
+        "calories": 0.5
+    },
+    {
+        "id": 34,
+        "name": "Spinach",
+        "category": "carrot",
+        "protein": 0.029,
+        "carbon": 0.036,
+        "fat": 0,
+        "calories": 0.23
+    },
+    {
+        "id": 35,
+        "name": "Zucchini",
+        "category": "carrot",
+        "protein": 0.01,
+        "carbon": 0.03,
+        "fat": 0,
+        "calories": 0.16
+    },
+    {
+        "id": 36,
+        "name": "Leek",
+        "category": "carrot",
+        "protein": 0.01,
+        "carbon": 0.14,
+        "fat": 0,
+        "calories": 0.61
+    },
+    {
+        "id": 37,
+        "name": "Eggplant",
+        "category": "carrot",
+        "protein": 0.011,
+        "carbon": 0.029,
+        "fat": 0,
+        "calories": 0.16
+    },
+    {
+        "id": 38,
+        "name": "Tomato",
+        "category": "carrot",
+        "protein": 0.0088,
+        "carbon": 0.039,
+        "fat": 0,
+        "calories": 0.18
+    },
+    {
+        "id": 39,
+        "name": "Tomato juice",
+        "category": "carrot",
+        "protein": 0.008,
+        "carbon": 0.059,
+        "fat": 0,
+        "calories": 0.27
+    },
+    {
+        "id": 40,
+        "name": "Redwine",
+        "category": "alcohol",
+        "protein": 0,
+        "carbon": 0.026,
+        "fat": 0,
+        "calories": 0.85
+    },
+    {
+        "id": 41,
+        "name": "Beer",
+        "category": "alcohol",
+        "protein": 0,
+        "carbon": 0.035,
+        "fat": 0,
+        "calories": 0.43
+    },
+    {
+        "id": 42,
+        "name": "Brandy",
+        "category": "alcohol",
+        "protein": 0,
+        "carbon": 0,
+        "fat": 0,
+        "calories": 3.5
+    }
+]
