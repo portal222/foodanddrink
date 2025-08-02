@@ -53,7 +53,6 @@ const CocktailGlass = () => {
         navigate(LinkTo);
     }
 
-
     if (isLoading) {
         return <Loader />
     }

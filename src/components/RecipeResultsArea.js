@@ -4,8 +4,6 @@ import Loader from "./Loader";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
-
 const RecipeResultsArea = () => {
     const [error, setError] = useState(null);
     const [recipe, setRecipe] = useState([]);
@@ -19,7 +17,6 @@ const RecipeResultsArea = () => {
     }, [area]);
 
     const getRecipe = async () => {
-
         const urlArea = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
 
         try {
@@ -49,7 +46,6 @@ const RecipeResultsArea = () => {
                     <hr></hr>
                 </h1>
             </div>
-
             <div className="areaMain">
                 {recipe.map((dataObj, id) => (
 

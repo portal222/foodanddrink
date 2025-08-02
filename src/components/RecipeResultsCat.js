@@ -4,35 +4,23 @@ import Loader from "./Loader";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
-
 const RecipeResultsCat = () => {
     const [error, setError] = useState(null);
     const [recipe, setRecipe] = useState([]);
-
-
     const [isLoading, setIsLoading] = useState(true);
 
     const navigate = useNavigate()
-
     const paramas = useParams()
     const category = paramas.category
-
 
     useEffect(() => {
         getRecipe(category);
     }, [category]);
-    console.log("iz RecipeResultscategory:", category)
-
 
     const getRecipe = async () => {
-
         const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
 
-
-
         try {
-
             const responseArea = await axios.get(url);
             const data = responseArea.data;
 
@@ -48,8 +36,6 @@ const RecipeResultsCat = () => {
         navigate(LinkTo);
     }
 
-
-
     if (isLoading) {
         return <Loader />
     }
@@ -61,13 +47,9 @@ const RecipeResultsCat = () => {
                     <hr></hr>
                 </h1>
             </div>
-
             <div className="areaMain">
-
                 {recipe.map((dataObj, id) => (
-
                     <div key={id} className="results">
-
                         <div className="recipeResult"
                             onClick={() => {
                                 handleClick(dataObj.idMeal);
@@ -86,7 +68,6 @@ const RecipeResultsCat = () => {
                 ))}
             </div>
             <div className="food" style={{height: "300px"}}></div>
-
             <div className="footer"></div>
         </>
     )

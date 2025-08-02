@@ -11,35 +11,27 @@ const RecipeResultsGro = () => {
     const [dish, setDish] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
    
-
-
     const navigate = useNavigate()
     const paramas = useParams()
     const groceries = paramas.groceries
 
-   
-
     useEffect(() => {
         getRecipe(groceries);
     }, [groceries]);
-
 
     const getRecipe = async () => {
         const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${groceries}`
         const urlDish = `https://www.themealdb.com/api/json/v1/1/search.php?s=${groceries}`
 
         try {
-
             const response = await axios.get(url);
             const responseDish = await axios.get(urlDish);
-
             const data = response.data;
             const dataDish = responseDish.data;
 
+            setIsLoading(false);
             setRecipe(data.meals);
             setDish(dataDish.meals);
-
-            setIsLoading(false);
         } catch (err) {
             setError(err);
         }
@@ -49,8 +41,6 @@ const RecipeResultsGro = () => {
         const LinkTo = `/${groceries}/recipe/${recipeId}`;
         navigate(LinkTo);
     }
-
-
 
     if (isLoading) {
         return <Loader />
@@ -64,13 +54,11 @@ const RecipeResultsGro = () => {
                     </div>
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
             </>
         )
     } else if (dish == null) {
         return (
-
             <>
                 <div className="titleLineFood"> 
                     <h1>
@@ -80,13 +68,9 @@ const RecipeResultsGro = () => {
                         <hr></hr>
                     </h1>
                 </div>
-
                 <div className="areaMain">
-
                     {recipe.map((dataObj, id) => (
-
                         <div key={id} className="results">
-
                             <div className="recipeResult"
                                 onClick={() => {
                                     handleClick(dataObj.idMeal);
@@ -105,17 +89,13 @@ const RecipeResultsGro = () => {
                     ))}
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
-
             </>
         )
     } else if (recipe == null) {
         return (
-
             <>
-                <div className="titleLineFood">
-                    
+                <div className="titleLineFood">      
                     <h1>
                         Dish by name {groceries}
                     </h1>
@@ -123,13 +103,9 @@ const RecipeResultsGro = () => {
                         <hr></hr>
                     </h1>
                 </div>
-
                 <div className="areaMain">
-
                     {dish.map((dataObj, id) => (
-
                         <div key={id} className="results">
-
                             <div className="recipeResult"
                                 onClick={() => {
                                     handleClick(dataObj.idMeal);
@@ -148,9 +124,7 @@ const RecipeResultsGro = () => {
                     ))}
                 </div>
                 <div className="food" style={{ height: "300px" }}></div>
-
                 <div className="footer"></div>
-
             </>
         )
     }
@@ -164,13 +138,9 @@ const RecipeResultsGro = () => {
                     <hr></hr>
                 </h1>
             </div>
-
             <div className="areaMain">
-
                 {recipe.map((dataObj, id) => (
-
                     <div key={id} className="results">
-
                         <div className="recipeResult"
                             onClick={() => {
                                 handleClick(dataObj.idMeal);
@@ -196,13 +166,9 @@ const RecipeResultsGro = () => {
                     <hr></hr>
                 </h1>
             </div>
-
             <div className="areaMain">
-
                 {dish.map((dataObj, id) => (
-
                     <div key={id} className="results">
-
                         <div className="recipeResult"
                             onClick={() => {
                                 handleClick(dataObj.idMeal);
@@ -221,7 +187,6 @@ const RecipeResultsGro = () => {
                 ))}
             </div>
             <div className="food" style={{ height: "300px" }}></div>
-
             <div className="footer"></div>
         </>
     )

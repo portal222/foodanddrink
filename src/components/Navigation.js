@@ -33,7 +33,6 @@ const Navigation = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 />
               </p>
-
             </NavLink>
             <NavLink to="/calories" className="button2"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -47,7 +46,6 @@ const Navigation = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Cocktails
             </NavLink>
-
           </div>
         </div>
 

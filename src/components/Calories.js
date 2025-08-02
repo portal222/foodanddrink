@@ -27,8 +27,6 @@ const Calories = () => {
 
     const handleResetHistory = () => {
         localStorage.removeItem("dailyCalories");
-
-
     };
 
     const handleInputChange = (id, value) => {

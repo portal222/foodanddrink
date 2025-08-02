@@ -1,10 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { Paper,InputBase,IconButton } from "@mui/material";
-
-
 import { useNavigate } from "react-router-dom";
 import GlobalContext from "./GlobalContext";
-
 
 const Search = () => {
 
@@ -19,8 +16,7 @@ const Search = () => {
         }
 
         globalCtx.setSearchStringFn(searchString.current.value.trim());
-        navigate('/recipe');
-        
+        navigate('/recipe');     
     };
 
     const handleKeyDown = (e) => {
@@ -28,25 +24,17 @@ const Search = () => {
             e.preventDefault();
             handleClickSearch();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
         }
     };
 
     return (
         <Paper className="paper"
         component = 'form'
- 
         >
             <InputBase 
-        
-            autoFocus
             placeholder="Recipe"
-          
             inputRef={searchString}
             onKeyDown={handleKeyDown}
-           
-            
-         
             />
             <IconButton 
             type='button'
@@ -58,7 +46,6 @@ const Search = () => {
             aria-label='search'
             >
                     🍖
-
             </IconButton>
         </Paper>
     );

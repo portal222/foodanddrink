@@ -1,10 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { Paper, InputBase, IconButton } from "@mui/material";
-
-
 import { useNavigate } from "react-router-dom";
 import GlobalContext from "./GlobalContext";
-
 
 const SearchCocktail = () => {
 
@@ -20,7 +17,6 @@ const SearchCocktail = () => {
 
         globalCtx.setSearchStringFn(searchString.current.value.trim());
         navigate('/cocktail');
-
     };
 
     const handleKeyDown = (e) => {
@@ -34,13 +30,9 @@ const SearchCocktail = () => {
     return (
         <Paper className="paper"
             component='form'
-
         >
             <InputBase className="base"
-
-                autoFocus
                 placeholder="Cocktails"
-
                 inputRef={searchString}
                 onKeyDown={handleKeyDown}
             />
@@ -54,7 +46,6 @@ const SearchCocktail = () => {
                 aria-label='search'
             >
                 🥂
-
             </IconButton>
         </Paper>
     );
