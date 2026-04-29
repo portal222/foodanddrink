@@ -16,19 +16,25 @@ const CocktailName = (props) => {
     }, []);
 
     const getDrink = async () => {
-  try {
-    const response = await axios.post("/.netlify/functions/drink", {
-      drink
-    });
+        const url = `https://api.api-ninjas.com/v1/cocktail?name=${drink}`;
 
-    const data = response.data;
-    setCocktail(data);
-    setResults(data.length);
-  } catch (err) {
-    setError(err);
-  }
-};
+        try {
+            const response = await axios.get(url,
+                {
+                    headers: {
+                        'X-Api-Key': 'D+dYjCxDSm5fEkIqyoCIeA==c2GvujXTiAbMIH05'
+                    }
+                }
+            );
+            const data = response.data;
 
+            setCocktail(data);
+            setResults(data.length);
+
+        } catch (err) {
+            setError(err);
+        }
+    };
 
     const click = (drink) => {
         const LinkTo = `/cocktailName/${drink}`;
