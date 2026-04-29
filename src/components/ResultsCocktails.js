@@ -34,7 +34,7 @@ const ResultsCocktails = () => {
 
     const getCocktails = async (searchStringValue) => {
         const url = `https://api.api-ninjas.com/v1/cocktail?name=${searchStringValue}`;
-        const urlImg = `https://list.ly/api/v4/search/image?q=${searchStringValue}`;
+        // const urlImg = `https://list.ly/api/v4/search/image?q=${searchStringValue}`;
         const urlIng = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchStringValue}`
         const urlFirst = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchStringValue}`
 
@@ -46,12 +46,12 @@ const ResultsCocktails = () => {
                     }
                 }
             );
-            const responseImg = await axios.get(urlImg);
+            // const responseImg = await axios.get(urlImg);
             const responseIng = await axios.get(urlIng);
             const responseFirst = await axios.get(urlFirst);
 
             const data = response.data
-            const dataImg = responseImg.data
+            // const dataImg = responseImg.data
             const dataIng = responseIng.data
             const dataFirst = responseFirst.data
             const length2 = response.data.length
@@ -59,7 +59,7 @@ const ResultsCocktails = () => {
             setCocktail(data);
             setResults2(length2);
             setResultsFirst(dataFirst.length)
-            setPhoto(dataImg.results);
+            // setPhoto(dataImg.results);
             setCocktails(dataFirst.drinks);
             setIsLoading(false);
 
@@ -192,7 +192,7 @@ const ResultsCocktails = () => {
             <div>
                 <DrinkIngred drink={searchStringValue} />
             </div>
-            <div className="drinkGrid">
+            {/* <div className="drinkGrid">
                 <div className="photo">
                     {photo && (
                         <div colSpan={2} >
@@ -208,7 +208,7 @@ const ResultsCocktails = () => {
                     )}
 
                 </div>
-            </div>
+            </div> */}
             <div className="titleLineDrink">
                 <h1>
                     Name {searchStringValue}
