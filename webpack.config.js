@@ -39,12 +39,6 @@ module.exports = {
                 ],
               }
         ],
-
-        // loaders: [
-        //     {test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' }
-        //         ]
-
-
     },
 
     plugins: [
