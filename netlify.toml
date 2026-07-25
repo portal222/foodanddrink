@@ -1,0 +1,6 @@
+[build]
+  command = "node node_modules/@rsbuild/core/bin/rsbuild.js build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
