@@ -28,32 +28,25 @@ const ResultsCocktails = () => {
 
     useEffect(() => {
         getCocktails(searchStringValue);
-        getCocktaName(searchStringValue);
+   
     }, [searchStringValue]);
 
     const getCocktails = async (searchStringValue) => {
-        const url = `https://api.api-ninjas.com/v1/cocktail?name=${searchStringValue}`;
+       
         const urlIng = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchStringValue}`
         const urlFirst = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchStringValue}`
 
         try {
-            const response = await axios.get(url,
-                {
-                    headers: {
-                        'X-Api-Key': 'D+dYjCxDSm5fEkIqyoCIeA==c2GvujXTiAbMIH05'
-                    }
-                }
-            );
+           
             const responseIng = await axios.get(urlIng);
             const responseFirst = await axios.get(urlFirst);
 
-            const data = response.data
+         
             const dataIng = responseIng.data
             const dataFirst = responseFirst.data
-            const length2 = response.data.length
+       
 
-            setCocktail(data);
-            setResults2(length2);
+          
             setResultsFirst(dataFirst.length)
             setCocktails(dataFirst.drinks);
             setIsLoading(false);
@@ -63,25 +56,7 @@ const ResultsCocktails = () => {
         }
     };
 
-    const getCocktaName = async (searchStringValue) => {
-        const url = `https://api.api-ninjas.com/v1/cocktail?ingredients=${searchStringValue}`;
-
-        try {
-            const response = await axios.get(url,
-                {
-                    headers: {
-                        'X-Api-Key': 'D+dYjCxDSm5fEkIqyoCIeA==c2GvujXTiAbMIH05'
-                    }
-                }
-            );
-            const data = response.data;
-            const length = response.data.length
-            setIngredints(data);
-            setResults(length);
-        } catch (err) {
-            setError(err);
-        }
-    };
+   
 
     const pageSize = 9;
     const paginatedPosts = PaginationDrink(cocktails, pageSize);
@@ -186,56 +161,7 @@ const ResultsCocktails = () => {
             <div>
                 <DrinkIngred drink={searchStringValue} />
             </div>
-            <div className="titleLineDrink">
-                <h1>
-                    Name {searchStringValue}
-                </h1>
-                <h1>
-                    <hr></hr>
-                </h1>
-            </div>
-            <div className="drinkGrid">
-
-                <div className="cocktailGrid">
-                    {cocktail.map((dataName, id) => (
-                        <div className="wrap" key={id}>
-                            <div
-                                className="cocktailName">
-                                {dataName.name}
-                            </div>
-                            <div className="cocktailCont">
-                                {dataName.ingredients.map((ing, id) => (
-
-                                    <p key={id}>{ing}</p>
-                                ))}
-                            </div>
-                            <div className="cocktailCont">{dataName.instructions}</div>
-                        </div>
-                    ))}
-                </div>
-                <div className="photo">
-                    {photo && (
-                        <div colSpan={2} >
-                            {photo.slice(1, 2).map((img, id) => (
-                                <>
-                                    <p key={id} >
-                                        <img src={img.image} alt="" />
-                                    </p>
-                                    <p className="subtitle">ilustrated photo</p>
-                                </>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </div>
-            <div className="titleLineDrink">
-                <h1>
-                    Ingedient {searchStringValue}
-                </h1>
-                <h1>
-                    <hr></hr>
-                </h1>
-            </div>
+         
             <div className="drinkGrid">
 
                 <div className="cocktailGrid">
