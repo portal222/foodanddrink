@@ -31,8 +31,6 @@ const CocktailName = (props) => {
             setCocktail(data);
             setResults(data.length);
 
-            console.log("detalji koktela", data);
-
         } catch (err) {
             setError(err);
         }

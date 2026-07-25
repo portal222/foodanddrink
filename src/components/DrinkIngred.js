@@ -23,19 +23,14 @@ const DrinkIngred = (props) => {
 
         try {
             const responseIngred = await axios.get(urlIngred);
-
             const dataIngred = responseIngred.data
 
             setCocktails(dataIngred.drinks);
             setResult(dataIngred.length)
 
-            console.log("izbor u DrinkIngrid komp", dataIngred);
-
         } catch (err) {
             setError(err);
-
         }
-
     };
 
     const pageSize = 6;
@@ -59,8 +54,7 @@ const DrinkIngred = (props) => {
                 <h1>
                     <hr></hr>
                 </h1>
-            </div>
-               
+            </div>  
                 <Box>
                     <div className="cocktail">
                         {currentPosts &&

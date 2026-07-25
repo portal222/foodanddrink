@@ -16,6 +16,8 @@ import RecipeResultsGro from "./RecipeResultsGro";
 import RecipeResultsCat from "./RecipeResultsCat";
 import Dish from "./Dish";
 import logo from "../../public/assets/img/DD_logo.png"
+import SpoonacularRecipe from "./spoon/SpoonacularRecipe";
+import SpoonacularGroResult from "./spoon/SpoonacularGroResult";
 
 const Navigation = () => {
   var today = new Date
@@ -67,6 +69,9 @@ const Navigation = () => {
           <Route path="Dish/home3/:category" element={<RecipeResultsCat />} />
           <Route path="home3/:category" element={<RecipeResultsCat />} />
           <Route path="/home3/:category/recipe/:recipeId" element={<DetailsRecipe />} />
+          <Route path="recipe/spoon/:recipeId" element={<SpoonacularRecipe />} />
+          <Route path="/:search/spoon/:recipeId" element={<SpoonacularRecipe />} />
+
 
         </Routes>
         <div className="footer">

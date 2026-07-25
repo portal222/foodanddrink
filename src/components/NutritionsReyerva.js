@@ -82,15 +82,13 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
     return acc;
   }, { protein: 0, carbs: 0, fat: 0, calories: 0 });
 
-  // Ukupno iz ručnih unosa
   const totalsManual = {
     protein: (inputValue1 * 0.076) + (inputValue2 * 0.139),
     carbs: (inputValue1 * 0.78) + (inputValue2 * 0.644),
-    fat: 0, // možeš dodati ako znaš vrednosti
+    fat: 0, 
     calories: (inputValue1 * 3.51) + (inputValue2 * 3.74)
   };
 
-  // Kombinovani ukupni nutritivni podaci
   const grandTotals = {
     protein: totalsFromFruit.protein + totalsManual.protein,
     carbs: totalsFromFruit.carbs + totalsManual.carbs,
@@ -98,7 +96,6 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
     calories: totalsFromFruit.calories + totalsManual.calories
   };
 
-  // Ručne stavke
   const rice = "Pirinač";
   const oatmeal = "Ovsene pahuljice";
 
@@ -106,7 +103,6 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
     <>
     <table className="nutrition-table">
       <tbody>
-        {/* Prikaz voća iz JSON baze */}
         {fruit.map((fr, id) => {
           const grams = inputValues[id] || 0;
           return (
@@ -136,7 +132,6 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
           );
         })}
 
-        {/* Pirinač */}
         <tr className="hydrates">
           <Groceries food={rice} />
           <td className="protein">
@@ -153,7 +148,6 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
           <td className="protein">{(inputValue1 * 3.51).toFixed(1)}</td>
         </tr>
 
-        {/* Ovsene pahuljice */}
         <tr className="hydrates">
           <Groceries food={oatmeal} />
           <td className="protein">
@@ -170,7 +164,6 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
           <td className="protein">{(inputValue2 * 3.74).toFixed(1)}</td>
         </tr>
 
-        {/* Ukupne nutritivne vrednosti */}
         <tr className="total-row">
           <td>Ukupno:</td>
           <td></td>
@@ -182,7 +175,6 @@ localStorage.setItem("dailyCalories", JSON.stringify(dailyCalories));
       </tbody>
     </table>
 
-    {/* dodatak koji prikazuje ranije unose po danima */}
     <div className="history">
     <h3>📅 Istorija unosa kalorija</h3>
     <table>

@@ -4,6 +4,7 @@ import GlobalContext from "./GlobalContext";
 import Loader from "./Loader";
 import Search from "./Search";
 import { useNavigate } from "react-router-dom";
+import SpoonacularResult from "./spoon/SpoonacularResult";
 
 const RecipeResults = () => {
     const [error, setError] = useState(null);
@@ -82,9 +83,7 @@ const RecipeResults = () => {
                 </div>
                 <div className="areaMain">
                     {recipe.map((dataObj, id) => (
-
                         <div key={id} className="results">
-
                             <div className="recipeResult"
                                 onClick={() => {
                                     handleClick(dataObj.idMeal);
@@ -102,7 +101,8 @@ const RecipeResults = () => {
                         </div>
                     ))}
                 </div>
-                <div className="food" style={{ height: "300px" }}></div>
+                <SpoonacularResult />
+                <div className="food" style={{ height: "100px" }}></div>
                 <div className="footer"></div>
             </>
         )
@@ -137,6 +137,7 @@ const RecipeResults = () => {
                         </div>
                     ))}
                 </div>
+                <SpoonacularResult />
                 <div className="food" style={{ height: "300px" }}></div>
                 <div className="footer"></div>
             </>
@@ -209,6 +210,7 @@ const RecipeResults = () => {
                         </div>
                     ))}
                 </div>
+
                 <div className="food" style={{ height: "300px" }}></div>
                 <div className="footer"></div>
             </>
@@ -272,6 +274,7 @@ const RecipeResults = () => {
                         </div>
                     ))}
                 </div>
+                <SpoonacularResult />
                 <div className="food" style={{ height: "300px" }}></div>
                 <div className="footer"></div>
             </>
@@ -337,8 +340,10 @@ const RecipeResults = () => {
                     </div>
                 ))}
             </div>
+
             <div className="food" style={{ height: "300px" }}></div>
             <div className="footer"></div>
+
         </>
     );
 };

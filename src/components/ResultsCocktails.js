@@ -17,7 +17,6 @@ const ResultsCocktails = () => {
     const [results, setResults] = useState(1);
     const [results2, setResults2] = useState(1);
     const [cocktail, setCocktail] = useState([]);
-    const [image, setImage] = useState([]);
     const [photo, setPhoto] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [resultsFirst, setResultsFirst] = useState([]);
@@ -34,7 +33,6 @@ const ResultsCocktails = () => {
 
     const getCocktails = async (searchStringValue) => {
         const url = `https://api.api-ninjas.com/v1/cocktail?name=${searchStringValue}`;
-        // const urlImg = `https://list.ly/api/v4/search/image?q=${searchStringValue}`;
         const urlIng = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchStringValue}`
         const urlFirst = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchStringValue}`
 
@@ -46,12 +44,10 @@ const ResultsCocktails = () => {
                     }
                 }
             );
-            // const responseImg = await axios.get(urlImg);
             const responseIng = await axios.get(urlIng);
             const responseFirst = await axios.get(urlFirst);
 
             const data = response.data
-            // const dataImg = responseImg.data
             const dataIng = responseIng.data
             const dataFirst = responseFirst.data
             const length2 = response.data.length
@@ -59,7 +55,6 @@ const ResultsCocktails = () => {
             setCocktail(data);
             setResults2(length2);
             setResultsFirst(dataFirst.length)
-            // setPhoto(dataImg.results);
             setCocktails(dataFirst.drinks);
             setIsLoading(false);
 
@@ -183,7 +178,6 @@ const ResultsCocktails = () => {
         )
     }
 
-
     return (
         <>
             <div>
@@ -192,23 +186,6 @@ const ResultsCocktails = () => {
             <div>
                 <DrinkIngred drink={searchStringValue} />
             </div>
-            {/* <div className="drinkGrid">
-                <div className="photo">
-                    {photo && (
-                        <div colSpan={2} >
-                            {photo.slice(0, 1).map((img, id) => (
-                                <>
-                                    <p key={id} >
-                                        <img src={img.image} alt="" />
-                                    </p>
-                                    <p className="subtitle">ilustrated photo</p>
-                                </>
-                            ))}
-                        </div>
-                    )}
-
-                </div>
-            </div> */}
             <div className="titleLineDrink">
                 <h1>
                     Name {searchStringValue}
@@ -282,7 +259,5 @@ const ResultsCocktails = () => {
             <div className="drinkMain" style={{ height: "300px" }}></div>
         </>
     );
-
-
 };
 export default ResultsCocktails;

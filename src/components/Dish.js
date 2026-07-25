@@ -7,11 +7,12 @@ import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
 import dish1 from "../../public/assets/img/soup.jpg";
 import dish2 from "../../public/assets/img/beef.jpg";
-import dish3 from "../../public/assets/img/pad.jpg"
-import dish4 from "../../public/assets/img/pork.jpg"
-import dish5 from "../../public/assets/img/fish.jpg"
-import dish6 from "../../public/assets/img/chicken.jpg"
-import dish7 from "../../public/assets/img/bread.jpg"
+import dish3 from "../../public/assets/img/pad.jpg";
+import dish4 from "../../public/assets/img/pork.jpg";
+import dish5 from "../../public/assets/img/fish.jpg";
+import dish6 from "../../public/assets/img/chicken.jpg";
+import dish7 from "../../public/assets/img/bread.jpg";
+import areaData from "../../public/country.json";
 
 const Dish = () => {
 
@@ -34,20 +35,20 @@ const Dish = () => {
         const urlName = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
         const urlImg = `https://www.themealdb.com/api/json/v1/1/search.php?f=f`
         const urlRec = `https://www.themealdb.com/api/json/v1/1/random.php`
-        const urlArea = `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
+        // const urlArea = `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
         const urlCat = `https://www.themealdb.com/api/json/v1/1/categories.php`
       
         try {
             const responseName = await axios.get(urlName);
             const responseImg = await axios.get(urlImg);
             const responseRec = await axios.get(urlRec);
-            const responseArea = await axios.get(urlArea);
+            // const responseArea = await axios.get(urlArea);
             const responseCat = await axios.get(urlCat);
 
             const dataName = responseName.data
             const dataImg = responseImg.data
             const dataRec = responseRec.data.meals
-            const dataArea = responseArea.data.meals
+            const dataArea = areaData
             const dataCat = responseCat.data.categories
 
             setCocktails(dataName.drinks);
@@ -55,15 +56,12 @@ const Dish = () => {
             setFood(dataRec);
             setArea(dataArea);
             setCategories(dataCat);
-
             setIsLoading(false);
 
         } catch (err) {
             setError(err);
         }
     };
-
-
 
     const areaClick = (area) => {
         const LinkTo2 = `home2/${area}`;
@@ -78,7 +76,6 @@ const Dish = () => {
     if (isLoading) {
         return <Loader />
     }
-
     return (
         <>
             <div className="food">
@@ -105,7 +102,6 @@ const Dish = () => {
                         <div>
                             <img style={{ width: "100%" }} src={dish7} />
                         </div>
-
                     </Slide>
                 </div>
             </div>
@@ -115,22 +111,12 @@ const Dish = () => {
                     <hr></hr>
                 </h1>
             </div>
-
-
             <div className="food">
-
                 <div className="container">
                     <p> Search recipes by name, ingredients and first letter, or choose dishes by country or category </p>
-
                     <Search />
-
-
                 </div>
-
-
                 <div className="container">
-
-
                     <div className="area">
                         <p className="countryT">
                             COUNTRY:
@@ -139,10 +125,10 @@ const Dish = () => {
                             <p key={id}
                                 className="country"
                                 onClick={() => {
-                                    areaClick(a.strArea);
+                                    areaClick(a.strCountry);
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
                                 }}>
-                                {a.strArea}</p>
+                                {a.strCountry}</p>
                         ))}
                     </div>
                     <div className="area">
@@ -163,10 +149,6 @@ const Dish = () => {
                 </div>
             </div>
             <div className="food" style={{height: "300px"}}></div>
-            
-
-
-
         </>
     )
 }

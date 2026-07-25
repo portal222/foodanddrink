@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-
 const CocktailsDetails = (props) => {
 
     const [cocktails, setCocktails] = useState([]);
@@ -9,8 +8,7 @@ const CocktailsDetails = (props) => {
 
 const drink = props.drinkID
     useEffect(() => {
-        getCocktails(drink);
-  
+        getCocktails(drink);  
     }, [drink]);
 
     const getCocktails = async () => {

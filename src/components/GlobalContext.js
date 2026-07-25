@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const GlobalContext = React.createContext({
     searchStringValue: '',
     setSearchStringFn: () => {},
- 
 });
 
 export const GlobalProvider = ({ children }) => {
@@ -15,11 +14,9 @@ export const GlobalProvider = ({ children }) => {
         <GlobalContext.Provider value={{
             searchStringValue,
             setSearchStringFn,
-       
         }}>
             {children}
         </GlobalContext.Provider>
     );
 };
-
 export default GlobalContext;

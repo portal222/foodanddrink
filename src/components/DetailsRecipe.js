@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
+import Search from "./Search";
 
 const DetailsRecipe = () => {
     const [error, setError] = useState(null);
@@ -9,9 +10,9 @@ const DetailsRecipe = () => {
     const [image, setImage] = useState([]);
     const [page, setPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
+
     const params = useParams()
     const recipeId = params.recipeId;
-
 
     useEffect(() => {
         getRecipe(recipeId);
@@ -35,33 +36,27 @@ const DetailsRecipe = () => {
     if (isLoading) {
         return <Loader />
     } else
-    if (recipe == null) {
-        return (
-            <>
-                <table className="areaMain">
-                    <thead>
-                        <tr>
-                            <th>Nothing found</th>
-                        </tr>
-
-                    </thead>
-                </table>
-            <div className="food" style={{height: "300px"}}></div>
-                
+        if (recipe == null) {
+            return (
+                <>
+                    <table className="areaMain">
+                        <thead>
+                            <tr>
+                                <th>Nothing found</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div className="food" style={{ height: "300px" }}></div>
                 </>
-        )
-    }
+            )
+        }
     return (
         <>
             <div className="areaMain">
-
                 {recipe.map((rec, id) => (
                     <div key={id}>
-
-
                         <div style={{ width: "100%" }}>
                             <div className="recipeName" >
-
                                 {rec.strMeal}
                                 <p>
                                     {rec.strArea + " - " + rec.strCategory}
@@ -217,11 +212,12 @@ const DetailsRecipe = () => {
                                         </div>
                                     </div>
                                 )}
+                                <div className="ingSearch">
+                                    <Search />
+                                </div>
                             </div>
-
                             <div style={{ width: "50%" }}>
-                                <div className="context">
-                                    {rec.strInstructions}
+                                <div className="context" dangerouslySetInnerHTML={{ __html: (rec.strInstructions) }}>
                                 </div>
                                 <p> watch on
                                     <a href={rec.strYoutube} target="_blank"> YouTube</a>
@@ -231,9 +227,8 @@ const DetailsRecipe = () => {
                     </div>
                 ))}
             </div>
-            <div className="food" style={{height: "300px"}}></div>
-            
+            <div className="food" style={{ height: "300px" }}></div>
         </>
     );
-};
+}
 export default DetailsRecipe;

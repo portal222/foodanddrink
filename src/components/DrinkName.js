@@ -27,8 +27,6 @@ const DrinkName = (props) => {
             setCocktails(dataName.drinks || []);
             setResult(dataName.drinks);
 
-            console.log("po imenu koktela iz DrinkName", dataName);
-
         } catch (err) {
             setError(err);
         }
@@ -45,7 +43,6 @@ const DrinkName = (props) => {
             </>
         )
     }
-
     return (
         <>
             <div className="titleLineDrink">

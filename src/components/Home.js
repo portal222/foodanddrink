@@ -78,7 +78,6 @@ const Home = () => {
         navigate(LinkTo3);
     }
 
-
     if (isLoading) {
         return <Loader />
     }
@@ -114,36 +113,25 @@ const Home = () => {
                         <div>
                             <img style={{ width: "100%" }} src={dish9} />
                         </div>
-
                     </Slide>
                 </div>
             </div>
-
-
-
             <div className="home">
                 <div>
                     <h1>Welcome to</h1>
                     <h2>DISH & DRINK</h2>
-
                 </div>
             </div>
             <div className="titleLine">
-
                 <h1>Today's recommendation</h1>
                 <h1>
-
                     <hr></hr>
                 </h1>
-
             </div>
             <div className="home">
-
-
                 <div className="suggestion">
                     {food.map((f, id) => (
                         <div key={id} >
-
                             <div className="drink">
                                 <img src={f.strMealThumb}
                                     className="sugestImg"
@@ -157,19 +145,14 @@ const Home = () => {
                                         window.scrollTo({ top: 0, behavior: 'smooth' });
                                     }}>
                                     {f.strMeal}</p>
-
                             </div>
                         </div>
                     ))}
-
-
                 </div>
                 <div className="suggestion">
                     {cocktails.map((cocktail, id) => (
                         <div key={id} >
-
                             <div className="drink">
-
                                 <img src={cocktail.strDrinkThumb} />
                                 <p className="drinkLink">
                                     {cocktail.strDrink}</p>
@@ -186,22 +169,16 @@ const Home = () => {
                     </div>
                     <div className="cont">
                         <Search />
-
                         <SearchCocktail />
-
                     </div>
                 </div>
-
             </div>
             <div className="titleLine">
-                <h1>Dish category</h1>
+                <h1>Dish category </h1>
                 <h1>
-
                     <hr></hr>
                 </h1>
-
             </div>
-
             <div className="recipe">
                 {categories.map((cat, id) => (
                     <div key={id} className="resHome">
@@ -224,16 +201,10 @@ const Home = () => {
                         </div>
                         <div className="descr">
                             {cat.strCategoryDescription}
-
                         </div>
-
-
                     </div>
                 ))}
             </div>
-
-
-
         </>
     )
 }

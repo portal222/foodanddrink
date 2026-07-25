@@ -37,7 +37,6 @@ const Groceries = (props) => {
         }
     };
 
-
     const handleClick = (groceries) => {
         const LinkTo = `/${groceries}`;
         navigate(LinkTo);
@@ -61,7 +60,5 @@ const Groceries = (props) => {
             >{food} </td>
         </>
     )
-
-
 }
 export default Groceries;
