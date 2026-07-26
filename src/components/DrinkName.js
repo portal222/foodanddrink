@@ -3,6 +3,7 @@ import axios from 'axios';
 import CocktailsDetails from "./CocktailsDetails";
 import PaginationDrink from "./PaginationDrink";
 import { Box, Pagination } from "@mui/material";
+import SearchCocktail from "./SearchCocktail";
 
 const DrinkName = (props) => {
     const [error, setError] = useState(null);
@@ -39,6 +40,12 @@ const DrinkName = (props) => {
     if (result === null) {
         return (
             <>
+            <div className="drinkMain">
+                <div className="container">
+                    <p>{drinkName} not found</p>
+                    <SearchCocktail />
+                </div>
+            </div>
             
             </>
         )

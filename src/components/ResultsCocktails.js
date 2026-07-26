@@ -14,49 +14,36 @@ import { Box, Pagination } from "@mui/material";
 const ResultsCocktails = () => {
     const [error, setError] = useState(null);
     const [cocktails, setCocktails] = useState([]);
-    const [results, setResults] = useState(1);
-    const [results2, setResults2] = useState(1);
-    const [cocktail, setCocktail] = useState([]);
-    const [photo, setPhoto] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [resultsFirst, setResultsFirst] = useState([]);
+    const [resultsFirst, setResultsFirst] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
-    const [ingredints, setIngredints] = useState([]);
 
     const globalCtx = useContext(GlobalContext);
     const searchStringValue = globalCtx.searchStringValue;
 
     useEffect(() => {
         getCocktails(searchStringValue);
-   
+
     }, [searchStringValue]);
 
     const getCocktails = async (searchStringValue) => {
-       
-        const urlIng = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchStringValue}`
+
         const urlFirst = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchStringValue}`
 
         try {
-           
-            const responseIng = await axios.get(urlIng);
+
             const responseFirst = await axios.get(urlFirst);
-
-         
-            const dataIng = responseIng.data
             const dataFirst = responseFirst.data
-       
 
-          
-            setResultsFirst(dataFirst.length)
+            setResultsFirst(dataFirst.length);
             setCocktails(dataFirst.drinks);
             setIsLoading(false);
+
 
         } catch (err) {
             setError(err);
         }
     };
-
-   
 
     const pageSize = 9;
     const paginatedPosts = PaginationDrink(cocktails, pageSize);
@@ -104,10 +91,8 @@ const ResultsCocktails = () => {
                                             <CocktailsDetails drinkID={cocktail.idDrink} />
                                         </div>
                                     </div>
-
                                     <hr></hr>
                                 </div>
-
                             ))}
                     </div>
                     <div className="recipe">
@@ -131,11 +116,10 @@ const ResultsCocktails = () => {
 
             </>
         )
-    } else if (results === 0 && results2 === 0) {
+    } else if (resultsFirst === 0 ) {
 
         return (
             <>
-
                 <div className="drinkMain">
                     <table>
                         <thead>
@@ -145,7 +129,6 @@ const ResultsCocktails = () => {
                             <tr>
                                 <th><SearchCocktail /></th>
                             </tr>
-
                         </thead>
                     </table>
                 </div>
@@ -161,29 +144,9 @@ const ResultsCocktails = () => {
             <div>
                 <DrinkIngred drink={searchStringValue} />
             </div>
-         
-            <div className="drinkGrid">
 
-                <div className="cocktailGrid">
-                    {ingredints.map((dataObj, id) => (
-                        <div className="wrap" key={id}>
-                            <div
-                                className="recipeName"
-                            >{dataObj.name}</div>
-                            <div className="cocktailCont">
-
-                                {dataObj.ingredients.map((ing, id) => (
-                                    <p key={id}>{ing}</p>
-                                ))}
-                            </div>
-                            <div className="cocktailCont">
-                                {dataObj.instructions}</div>
-                        </div>
-                    ))}
-                </div>
-            </div >
             <div className="drinkMain" style={{ height: "300px" }}></div>
         </>
     );
-};
+}
 export default ResultsCocktails;

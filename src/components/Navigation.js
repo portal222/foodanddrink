@@ -8,16 +8,12 @@ import Cocktails from "./Cocktails";
 import CocktailsClick from "./CocktailsClick";
 import CocktailGlass from "./CocktailGlass";
 import DetailsRecipe from "./DetailsRecipe";
-
-
 import RecipeResultsArea from "./RecipeResultsArea";
 import RecipeResultsGro from "./RecipeResultsGro";
-
 import RecipeResultsCat from "./RecipeResultsCat";
 import Dish from "./Dish";
 import logo from "../../public/assets/img/DD_logo.png"
 import SpoonacularRecipe from "./spoon/SpoonacularRecipe";
-import SpoonacularGroResult from "./spoon/SpoonacularGroResult";
 
 const Navigation = () => {
   var today = new Date
@@ -71,7 +67,6 @@ const Navigation = () => {
           <Route path="/home3/:category/recipe/:recipeId" element={<DetailsRecipe />} />
           <Route path="recipe/spoon/:recipeId" element={<SpoonacularRecipe />} />
           <Route path="/:search/spoon/:recipeId" element={<SpoonacularRecipe />} />
-
 
         </Routes>
         <div className="footer">

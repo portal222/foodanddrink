@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import GlobalContext from "../../components/GlobalContext";
+
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader";
+
 
 const SpoonacularGroResult = (props) => {
 
@@ -10,6 +12,8 @@ const SpoonacularGroResult = (props) => {
     const [offset, setOffset] = useState(0);
     const [totalResults, setTotalResults] = useState(0);
     const [loading, setLoading] = useState(false);
+        const [isLoading, setIsLoading] = useState(true);
+    
 
     const navigate = useNavigate();
 
@@ -36,6 +40,8 @@ const SpoonacularGroResult = (props) => {
 
             setTotalResults(response.data.totalResults);
             setOffset(newOffset + 10);
+            setIsLoading(false);
+
 
         } catch (err) {
             setError(err);
@@ -55,6 +61,9 @@ const SpoonacularGroResult = (props) => {
         }
     };
 
+     if (isLoading) {
+        return <Loader />
+     }
     return (
         <>
             <div className="titleLineFood">
