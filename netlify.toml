@@ -1,6 +1,12 @@
 [build]
-  command = "node node_modules/@rsbuild/core/bin/rsbuild.js build"
   publish = "dist"
 
-[build.environment]
-  NODE_VERSION = "22"
+[[redirects]]
+  from = "/static/*"
+  to = "/static/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
