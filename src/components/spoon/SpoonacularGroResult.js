@@ -12,12 +12,9 @@ const SpoonacularGroResult = (props) => {
     const [offset, setOffset] = useState(0);
     const [totalResults, setTotalResults] = useState(0);
     const [loading, setLoading] = useState(false);
-        const [isLoading, setIsLoading] = useState(true);
-    
+    const [isLoading, setIsLoading] = useState(true);
 
     const navigate = useNavigate();
-
-
     const search = props.groceries;
 
     useEffect(() => {
@@ -61,9 +58,9 @@ const SpoonacularGroResult = (props) => {
         }
     };
 
-     if (isLoading) {
+    if (isLoading) {
         return <Loader />
-     }
+    }
     return (
         <>
             <div className="titleLineFood">
