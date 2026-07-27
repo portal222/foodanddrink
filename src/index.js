@@ -7,7 +7,7 @@ import "./scss/main.scss";
 import App from "./App";
 
 
-var root = ReactDOM.createRoot(document.getElementById("app"));
+var root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App
      number={10}
      title="String from index file" 
